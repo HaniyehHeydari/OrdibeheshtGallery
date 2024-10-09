@@ -1,0 +1,204 @@
+.Container {
+    background-color: rgba(250, 250, 250, 1);
+    ;
+}
+
+.Container-One {
+    width: 95%;
+    height: 90px;
+    margin-left: 38px;
+}
+
+.Container-Two {
+    width: 95%;
+    height: 95px;
+    margin-left: 38px;
+}
+
+.Container-One-Right {
+    float: right;
+    width: 60%;
+    height: 90px;
+}
+
+.Basket {
+    float: right;
+    direction: rtl;
+    width: 20%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 22px;
+    text-decoration: none;
+    color: #323232;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.User-Account {
+    float: right;
+    direction: rtl;
+    width: 20%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 22px;
+    text-decoration: none;
+    color: #323232;
+    border-radius: 16px;
+    border: 1px solid #FCBD15;
+    background-color: #FCBD15;
+}
+
+.Search {
+    float: right;
+    direction: rtl;
+    width: 50%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 22px;
+    border-radius: 16px;
+    color: #212529;
+    border: 1px solid #ECEBE9;
+    background-color: #ECEBE9;
+}
+
+.Search-Img {
+    margin-right: 25px;
+}
+
+.Search_Key {
+    width: 100%;
+    height: 53px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 16px;
+    border: 1px solid #ECEBE9;
+    background-color: #ECEBE9;
+}
+
+::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
+.Search_Key:focus {
+    outline: none;
+}
+
+.Basket p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+.Zero {
+    width: 24px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: .5rem;
+    color: #323232;
+    background-color: #ECEBE9;
+    padding-bottom: 4px;
+}
+
+.User-Account p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+.Basket:hover {
+    border: 1px solid #808080;
+    background-color: #808080;
+    color: white;
+}
+
+.User-Account:hover {
+    border: 1px solid #e69e19;
+    background-color: #e69e19;
+}
+
+.Container-Two-Right {
+    float: right;
+    width: 45%;
+    height: 95px;
+}
+
+.Container-Two-Left {
+    float: left;
+    width: 35%;
+    height: 95px;
+    margin-left: 20px;
+}
+
+.Container-Two-Right div a {
+    float: right;
+    direction: rtl;
+    height: 95px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #323232;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.Download-Application {
+    float: left;
+    direction: rtl;
+    width: 30%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 22px;
+    text-decoration: none;
+    color: #323232;
+    border-radius: 16px;
+    border: 1px solid #ECEBE9;
+    background-color: #ECEBE9;
+}
+
+.Download-Application:hover {
+    border: 1px solid rgb(138, 130, 130);
+}
+
+.Download-Application p {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.Ibulk-Instagram {
+    float: left;
+    direction: rtl;
+    width: 32.5%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 22px;
+    text-decoration: none;
+    color: #323232;
+    border-radius: 16px;
+    border: 1px solid #ECEBE9;
+    background-color: #ECEBE9;
+}
+
+.Ibulk-Instagram:hover {
+    border: 1px solid rgb(138, 130, 130);
+}
+
+.Ibulk-Instagram p {
+    margin-right: 5px;
+}
