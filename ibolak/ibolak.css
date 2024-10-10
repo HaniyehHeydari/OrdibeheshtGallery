@@ -215,7 +215,7 @@
 
 .Footer-Top {
   width: 100%;
-  height: 370px;
+  height: 400px;
   background-color: rgba(250, 250, 250, 1);
 }
 
@@ -263,7 +263,7 @@
   margin-right: 25px;
 }
 
-h3{
+h3 {
   float: right;
 }
 
@@ -272,16 +272,15 @@ h3{
   color: #323232;
 }
 
-.Ul-Right li:hover{
+.Ul-Right li:hover {
   cursor: pointer;
 }
 
-li{
+li {
   margin-top: 25px;
 }
 
-li::marker{
-  font-size: 25px;
+li::marker {
   color: #ecebe9;
 }
 
@@ -295,11 +294,24 @@ li::marker{
   float: right;
 }
 
-.Footer-Top-Left-Right-Top-Top{
+.Footer-Top-Left-Right-Top-Top {
   direction: rtl;
 }
 
-.Footer-Top-Left-Right-Top-Botton{
+.Footer-Top-Left-Right-Top-Botton {
   width: 492px;
+  height: 155px;
+}
+
+.Footer-Top-Left-Right-Top-Botton-Right {
+  float: right;
+  width: 24%;
+  height: 155px;
+  margin-top: 12px;
+}
+
+.Footer-Top-Left-Right-Top-Botton-Left {
+  float: right;
+  width: 32%;
   height: 155px;
 }
