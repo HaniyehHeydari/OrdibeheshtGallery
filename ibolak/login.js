@@ -8,6 +8,7 @@ inputFields.forEach(function (field) {
         }
     });
 });
+
 function findErrorMessage(fieldId) {
     switch (fieldId) {
         case 'emailuser':
@@ -68,12 +69,11 @@ function validateLoginForm(event) {
         }
     }
 
-
     if (isValid) {
         // Store username and password in local storage
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
-        window.location.href = "../dashbordPage/dashbord.html";
+        window.location.href = "./ibolak.html";
     }
 
     return isValid;
