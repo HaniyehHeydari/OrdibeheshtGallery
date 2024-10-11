@@ -338,7 +338,6 @@ li::marker {
 .Row-Top div {
   width: 22%;
   height: 424px;
-  background-color: green;
   margin: 25px 16px;
   border-radius: 16px;
 
@@ -353,7 +352,6 @@ li::marker {
 .Row-Down div {
   width: 22%;
   height: 424px;
-  background-color: green;
   margin: 25px 16px;
   border-radius: 16px;
 
