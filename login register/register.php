@@ -1,6 +1,7 @@
 <?php include "./register-validation.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +13,8 @@
   <div class="main">
     <form id="form-register" name="register" method="post">
       <div>
-        <img src="https://ibolak.com/storage/image/2024/6/1718807353-TCMlDRbPFbA1CHFG.svg" 
-             style="width: 285px; height: 90px; margin-right: 95px" />
+        <img src="https://ibolak.com/storage/image/2024/6/1718807353-TCMlDRbPFbA1CHFG.svg"
+          style="width: 285px; height: 90px; margin-right: 95px" />
       </div>
 
       <div id="fullnames">
@@ -53,11 +54,13 @@
 
       <button name="button" id="sabtnam" type="submit">ثبت نام</button>
 
-    
+
       <p id="sabt">
         قبلا ثبت نام کرده اید؟<a href="./login.php" id="vorodhesab">ورود به حساب</a>
       </p>
     </form>
   </div>
+  <script src="/ibolak/register.js"></script>
 </body>
+
 </html>

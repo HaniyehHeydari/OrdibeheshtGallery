@@ -1,4 +1,4 @@
-<?php include "./login-validation.php"; ?> 
+<?php include "./login-validation.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,11 +30,12 @@
             <div class="accont">
                 <a id="forget" href="#">کلمه عبور خود را فراموش کرده اید؟</a>
                 <p id="sabt">
-                    حساب کاربری ندارید؟<a href="./register.html" id="sabtnam">ثبت نام</a>
+                    حساب کاربری ندارید؟<a href="./register.php" id="sabtnam">ثبت نام</a>
                 </p>
             </div>
         </form>
     </div>
+    <script src="/ibolak/login.js"></script>
 </body>
 
 </html>

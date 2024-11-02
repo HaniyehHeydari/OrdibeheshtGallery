@@ -25,17 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['gender'] = 'لطفا جنسیت خود را انتخاب کنید';
     }
 
- 
+
     if (count($errors) === 0) {
 
-        
+
         echo ($fullname) . "<br />";
         echo ($email) . "<br />";
         echo ($password) . "<br />";
         echo ($gender) . "<br />";
-        
+
 
         exit();
     }
 }
-?>
