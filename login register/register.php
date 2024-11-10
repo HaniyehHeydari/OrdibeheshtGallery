@@ -25,17 +25,17 @@
 
       <div id="email">
         <label for="emailuser">ایمیل</label><br />
-        <input type="text" id="emailuser" name="emailuser" placeholder="NegarKakavan@gmail.com" title="لطفا ایمیل معتبر وارد کنید" value="<?= htmlspecialchars($email ?? '') ?>" />
-        <span class="error-message"><?= $errors['emailuser'] ?? '' ?></span>
+        <input type="text" id="emailuser" name="email" placeholder="NegarKakavan@gmail.com" title="لطفا ایمیل معتبر وارد کنید" value="<?= htmlspecialchars($email ?? '') ?>" />
+        <span class="error-message"><?= $errors['email'] ?? '' ?></span>
       </div>
 
       <div id="password">
         <label for="pass">رمز عبور</label>
-        <input type="password" id="pass" name="pass" placeholder="********" title="لطفا یک رمز عبور معتبر وارد کنید." />
-        <span class="error-message"><?= $errors['pass'] ?? '' ?></span>
+        <input type="password" id="pass" name="password" placeholder="********" title="لطفا یک رمز عبور معتبر وارد کنید." />
+        <span class="error-message"><?= $errors['password'] ?? '' ?></span>
       </div>
 
-      <select id="educationLevel" name="educationLevel">
+      <select id="educationLevel" name="education">
         <option value="" disabled selected>مدرک تحصیلی</option>
         <option value="highschool" <?= isset($educationLevel) && $educationLevel == 'highschool' ? 'selected' : '' ?>>دیپلم</option>
         <option value="lisans" <?= isset($educationLevel) && $educationLevel == 'lisans' ? 'selected' : '' ?>>لیسانس</option>
