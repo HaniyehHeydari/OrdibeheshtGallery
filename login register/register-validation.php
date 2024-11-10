@@ -1,4 +1,10 @@
 <?php
+
+$conn = new mysqli("localhost", "root", "", "ibolak");
+if ($conn->connect_error)
+    die("اتصال برقرار نشد");
+$conn->query("SET NAMES utf8");
+
 $errors = [];
 $success = '';
 
@@ -38,3 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
+
+$sql = "INSERT INTO users (user_name,email,password,education,gender) VALUES (' $fullname','$email','$password','$educationLevel','$gender')";
+if ($conn->query($sql) === true) {
+    echo "ثبت نام شما با موفقیت انجام شد";
+    header("Location:./login.php");
+} else
+    echo "خطا در ثبت";
+$conn->close();
