@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user']) || $_SESSION['user'] !== true) {
+  header("Location: ../login register/login.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +34,13 @@
           </a>
           <a class="User-Account" href="login.html">
             <img src="https://ibolak.com/assets/icons/user.svg" style="margin-right: 30px" />
-            <p>حساب کاربری</p>
+            <?php
+            if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
+            ?>
+              <span><?php echo $_SESSION['fullname']; ?></span>
+            <?php } else { ?>
+              <p>حساب کاربری</p>
+            <?php } ?>
           </a>
           <div class="Search">
             <div class="Search-Img">
@@ -94,6 +109,7 @@
       </nav>
     </div>
   </header>
+
   <!-- Main -->
   <main style="background-color: rgba(250, 250, 250, 1);">
     <div class="Row">

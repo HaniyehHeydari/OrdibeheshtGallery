@@ -73,7 +73,7 @@ function validateLoginForm(event) {
         // Store username and password in local storage
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
-        window.location.href = "./ibolak.html";
+        window.location.href = "./ibolak.php";
     }
 
     return isValid;

@@ -1,4 +1,4 @@
-<?php include "./login-validation.php"; ?>
+<?php include "./login-validation.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 

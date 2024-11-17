@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <title>فروشگاه ایرانیان</title>
 </head>
+
 <body>
     <div class="divTable">
         <div class="divTableRow">
             <div class="divTableCell">
                 <header class="divTable">
-                  <div class="divTableRow">
-                    <div class="divTableCell">لوگوی سایت<div>
-                  </div>
+                    <div class="divTableRow">
+                        <div class="divTableCell">لوگوی سایت<div>
+                            </div>
                 </header>
                 <nav class="divTable">
                     <ul class="divTableRow">
@@ -35,6 +37,6 @@
                     </ul>
                 </nav>
                 <section class="divTable">
-                   <section class="divTableRow">
-                      <aside class="divTableCell" style="width:25%;">بخش امکانات سایت</aside>
-                      <section class="divTableCell"style="width:25%;">
+                    <section class="divTableRow">
+                        <aside class="divTableCell" style="width:25%;">بخش امکانات سایت</aside>
+                        <section class="divTableCell" style="width:25%;">

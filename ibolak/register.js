@@ -168,7 +168,7 @@ function validateRegisterForm(event) {
 
 
   if (isValid) {
-    window.location.href = "login.html";
+    window.location.href = "login.php";
   }
 
 
