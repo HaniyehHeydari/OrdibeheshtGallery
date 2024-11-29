@@ -108,6 +108,45 @@ if (!isset($_SESSION['user']) || $_SESSION['user'] !== true) {
         </div>
       </nav>
     </div>
+
+
+    <!-- section -->
+    <div class="Container-tree" style="
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;">
+        <div class="header-container">
+            <nav style="  display: flex;
+  justify-content: center;
+  gap: 20px;">
+                <a href="./ibolak.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">صفحه اصلی</a>
+                <?php if (isset($_SESSION['user'])) { ?>
+                <a href="../login register/./view-products.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">مدیریت محصولات</a>
+                <a href="../login register/./logout-validation.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">خروج از سایت</a>
+                  <a href="about.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">درباره ما</a>
+                <a href="contact.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">ارتباط با ما</a>
+                <a href="../login register/./login.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;"
+                <?php } else { ?>
+                  >ورود</a>
+                <a href="../login register/./register.php" style="  color: #fff;
+  text-decoration: none;
+  padding: 10px;">ثبت نام</a>
+                <?php } ?>
+            </nav>
+        </div>
+    </div>
   </header>
 
   <!-- Main -->

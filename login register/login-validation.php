@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-
     if (empty($email)) {
         $errors['email'] = 'لطفا ایمیل خود را وارد کنید';
     }
@@ -32,6 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["user"] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['fullname'] = $users['fullname'];
+                if ($users['type'] == 0) {
+                    $_SESSION['user_type'] = 'public';
+                    // $_SESSION['type'] = 0;
+                } else {
+                    $_SESSION['user_type'] = 'admin';
+                    // $_SESSION['type'] = 1;
+                }
                 header("Location: ../ibolak/ibolak.php");
                 exit();
             } else {
