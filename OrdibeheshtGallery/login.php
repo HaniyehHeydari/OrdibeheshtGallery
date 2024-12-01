@@ -10,11 +10,12 @@
 </head>
 
 <body dir="rtl">
-    <div class="main">
-        <form id="form-sign" name="login" method="POST">
 
+<div class="main">
+        <form id="form-sign" name="login" method="POST">
+        
             <div>
-                <img src="https://ibolak.com/storage/image/2024/6/1718807353-TCMlDRbPFbA1CHFG.svg" style="width: 285px; height: 90px; margin-right: 95px" />
+                <img src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
             </div>
             <div id="email">
                 <label for="emaill">ایمیل</label><br />
@@ -30,12 +31,13 @@
             <div class="accont">
                 <a id="forget" href="#">کلمه عبور خود را فراموش کرده اید؟</a>
                 <p id="sabt">
-                    حساب کاربری ندارید؟<a href="./register.php" id="sabtnam">ثبت نام</a>
+                    حساب کاربری ندارید؟<a href="register.php" id="sabtnam">ثبت نام</a>
                 </p>
             </div>
         </form>
     </div>
-    <script src="/ibolak/login.js"></script>
+    <script src="/login.js"></script>
+    
 </body>
 
 </html>

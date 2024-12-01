@@ -50,32 +50,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
-
-<!DOCTYPE html>
-<html lang="fa">
-
-<head>
-    <meta charset="UTF-8">
-    <title>مدیریت محصولات</title>
-</head>
-
-<body>
-    <h1>مدیریت محصولات</h1>
-    <?php
-    if (isset($_SESSION['message'])) {
-        echo "<p>" . $_SESSION['message'] . "</p>";
-        unset($_SESSION['message']);
-    }
-    ?>
-    <form method="post" enctype="multipart/form-data">
-        نام محصول: <input type="text" name="productname" required><br>
-        توضیحات محصول: <textarea name="productdescription" required></textarea><br>
-        قیمت محصول: <input type="number" step="0.01" name="productprice" required><br>
-        تصویر محصول: <input type="file" name="productimage" accept="image/*" required><br>
-        <input type="submit" value="افزودن محصول">
-    </form>
-    <br>
-    <a href="view-products.php">نمایش محصولات</a>
-</body>
-
-</html>

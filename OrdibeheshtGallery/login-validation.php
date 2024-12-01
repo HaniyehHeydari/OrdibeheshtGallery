@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['user_type'] = 'admin';
                     // $_SESSION['type'] = 1;
                 }
-                header("Location: ../ibolak/ibolak.php");
+                header("Location:../OrdibeheshtGallery/Main-Page.php");
                 exit();
             } else {
                 $errors['password'] = "رمز عبور اشتباه است";
