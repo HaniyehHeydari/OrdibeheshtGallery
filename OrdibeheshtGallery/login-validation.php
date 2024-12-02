@@ -31,14 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["user"] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['fullname'] = $users['fullname'];
+                // تعیین نوع کاربر (عمومی یا ادمین)
                 if ($users['type'] == 0) {
                     $_SESSION['user_type'] = 'public';
-                    // $_SESSION['type'] = 0;
+                    // هدایت به صفحه اصلی برای کاربران عمومی
+                    header("Location: ../OrdibeheshtGallery/Main-Page.php");
                 } else {
                     $_SESSION['user_type'] = 'admin';
-                    // $_SESSION['type'] = 1;
+                    // هدایت به داشبورد ادمین
+                    header("Location: admin-dashboard.php");
                 }
-                header("Location:../OrdibeheshtGallery/Main-Page.php");
                 exit();
             } else {
                 $errors['password'] = "رمز عبور اشتباه است";

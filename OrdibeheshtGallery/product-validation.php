@@ -7,7 +7,7 @@ if ($conn->connect_error) {
 }
 $conn->query("SET NAMES utf8");
 
-if (!isset($_SESSION['user']) || $_SESSION['user'] !== true) {
+if (!isset($_SESSION['user']) || $_SESSION['user_type'] != 'admin') {
     header("Location: ../login_register/login.php");
     exit();
 }
@@ -44,9 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message'] = "خطا در آپلود تصویر.";
     }
 
-    header("Location: product.php");
+    header("Location: admin-dashboard.php");
     exit();
 }
 
 $conn->close();
-?>

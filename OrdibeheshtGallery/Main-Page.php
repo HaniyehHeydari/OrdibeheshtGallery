@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user']) || $_SESSION['user'] !== true) {
-  header("Location: ../login register/login.php");
+  header("Location: Main-Page");
   exit();
 }
 $conn = new mysqli("localhost", "root", "", "ibolak");
@@ -147,8 +147,6 @@ $result = $conn->query($sql);
       }
       ?>
     </table>
-    <br>
-    <a href="../login register/./product.php">افزودن محصول جدید</a>
   </main>
 
   <?php include('Footer.php') ?>

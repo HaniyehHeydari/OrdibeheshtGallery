@@ -8,17 +8,6 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <nav>
-                <a href="ibolak.php">صفحه اصلی</a>
-                <a href="about.php">درباره ما</a>
-                <a href="contact.php">ارتباط با ما</a>
-                <a href="admin.php">مدیریت محصولات</a>
-                <a href="logout.php">خروج از سایت</a>
-            </nav>
-        </div>
-    </header>
     <main>
         <section class="admin-panel">
             <h1>صفحه ثبت محصولات</h1>
