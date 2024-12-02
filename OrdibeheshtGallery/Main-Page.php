@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 
   <nav class="Navbar">
     <div>
-      <a href="#">
+      <a href="./Main-Page.php">
         <p>صفحه اصلی</p>
       </a>
     </div>
@@ -62,8 +62,8 @@ $result = $conn->query($sql);
       </a>
     </div>
     <div>
-      <a href="#">
-        <p>تخفیف ها</p>
+      <a href="./logout-validation.php">
+        <p>خروج</p>
       </a>
     </div>
     </div>

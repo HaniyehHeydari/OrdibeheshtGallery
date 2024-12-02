@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['message'] = "خطا در آپلود تصویر.";
     }
 
-    header("Location: admin-dashboard.php");
+    header("Location: admindashboard.php");
     exit();
 }
 

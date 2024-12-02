@@ -13,7 +13,7 @@
         <div class="Container">
             <div class="Container-One">
                 <a class="Logo-One">
-                    <img src="./img/logow.png" width="200" height="68" />
+                    <img src="./img/logo-1.png" width="200" height="68" />
                 </a>
                 <div class="Container-One-Left">
                     <div class="Search">

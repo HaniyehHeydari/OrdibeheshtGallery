@@ -5,10 +5,11 @@ body {
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #f4f4f4;
+  width: 150px;
+  background-color: rgb(232, 240, 254);
   padding: 20px;
   height: 100vh;
+  font-size: 18px;
 }
 
 .content {
@@ -22,28 +23,32 @@ body {
   color: #333;
   margin: 10px 0;
   padding: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-}
-
-.sidebar a:hover {
-  background-color: #bbb;
+  text-align: center;
 }
 
 .product-table {
-  width: 100%;
+  width: 755px;
   border-collapse: collapse;
+}
+
+.product-table th {
+  font-size: 25px;
 }
 
 .product-table th,
 .product-table td {
   padding: 10px;
-  border: 1px solid #ddd;
   text-align: center;
 }
 
+.product-table tr{
+  border: 1px solid #ddd;
+}
+
 .product-table img {
-  width: 100px;
+  width: 200px;
+  height: 200px;
+
 }
 
 .btn-edit,
@@ -56,9 +61,19 @@ body {
 }
 
 .btn-edit {
-  background-color: #ff9800;
+  background-color: #26adf8;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 
 .btn-delete {
-  background-color: #f44336;
+  background-color: #26adf8;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px;
 }

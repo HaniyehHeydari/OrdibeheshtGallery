@@ -29,19 +29,17 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>admin-dashboard</title>
-    <link rel="stylesheet" href="./admin-dashboard.css" />
+    <link rel="stylesheet" href="./admindashboard.css" />
 
 </head>
 
-<body>
+<body dir="rtl">
     <div class="sidebar">
-        <h3>داشبورد ادمین</h3>
         <a href="./Main-Page.php">صفحه اصلی</a>
         <a href="./product.php">افزودن محصول</a>
         <a href="./logout-validation.php">خروج</a>
     </div>
     <div class="content">
-        <h1>مدیریت محصولات</h1>
         <table class="product-table">
             <tr>
                 <th>تصویر</th>
@@ -54,7 +52,7 @@ $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td><img src='uploads/" . $row['productimage'] . "' alt='Product Image'></td>";
+                    echo "<td><img src='uploads/" . $row['productimage'] .  "' alt='Product Image' ></td>";
                     echo "<td>" . $row['productname'] . "</td>";
                     echo "<td>" . $row['productprice'] . "</td>";
                     echo "<td>" . $row['productdescription'] . "</td>";
