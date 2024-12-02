@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['user']) || $_SESSION['user'] !== true) {
+    header("Location:login.php");
+    exit();
+}
 
 // اتصال به دیتابیس
 $conn = new mysqli("localhost", "root", "", "ibolak");
@@ -24,73 +28,9 @@ $result = $conn->query($sql);
 
 <head>
     <meta charset="UTF-8">
-    <title>داشبورد ادمین</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            margin: 0;
-        }
+    <title>admin-dashboard</title>
+    <link rel="stylesheet" href="./admin-dashboard.css" />
 
-        .sidebar {
-            width: 200px;
-            background-color: #f4f4f4;
-            padding: 20px;
-            height: 100vh;
-        }
-
-        .content {
-            padding: 20px;
-            flex-grow: 1;
-        }
-
-        .sidebar a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #ddd;
-            border-radius: 5px;
-        }
-
-        .sidebar a:hover {
-            background-color: #bbb;
-        }
-
-        .product-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .product-table th,
-        .product-table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        .product-table img {
-            width: 100px;
-        }
-
-        .btn-edit,
-        .btn-delete {
-            background-color: #f4f4f4;
-            padding: 5px 10px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-edit {
-            background-color: #ff9800;
-        }
-
-        .btn-delete {
-            background-color: #f44336;
-        }
-    </style>
 </head>
 
 <body>
