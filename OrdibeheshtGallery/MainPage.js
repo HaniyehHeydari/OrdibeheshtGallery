@@ -1,23 +1,37 @@
-let currentSlide = 0;
+let slideIndex = 0;
+showSlides(slideIndex);
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-slide');
-    if (index >= slides.length) currentSlide = 0;
-    if (index < 0) currentSlide = slides.length - 1;
-
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === currentSlide) {
-            slide.classList.add('active');
-        }
-    });
+// Next/previous controls
+function moveSlide(n) {
+    showSlides(slideIndex += n);
 }
 
-function moveSlide(direction) {
-    currentSlide += direction;
-    showSlide(currentSlide);
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }
 
-// نمایش اسلاید اول در بارگذاری صفحه
-showSlide(currentSlide);
-``
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel-slide");
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "block";
+}
+
+// Auto slide function
+function autoSlides() {
+    let slides = document.getElementsByClassName("carousel-slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(autoSlides, 5000); // Change image every 5 seconds
+}
+
+autoSlides();

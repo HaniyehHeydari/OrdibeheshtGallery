@@ -53,9 +53,9 @@ $result = $conn->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
                     echo "<td><img src='uploads/" . $row['productimage'] .  "' alt='Product Image' ></td>";
-                    echo "<td>" . $row['productname'] . "</td>";
-                    echo "<td>" . $row['productdescription'] . "</td>";
-                    echo "<td>" . $row['productprice'] . "</td>";
+                    echo "<td><h3 class='product-name'>" . $row['productname'] . "</h3></td>";
+                    echo "<td><p class='product-description'>" . $row['productdescription'] . "</p></td>";
+                    echo "<td><h2 class='product-price'>" . number_format($row['productprice']) . " تومان </h2></td>";
                     echo "<td>
                             <a href='edit-product.php?id=" . $row['id'] . "' class='btn-edit'>ویرایش</a>
                             <a href='delete-product.php?id=" . $row['id'] . "' class='btn-delete' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>

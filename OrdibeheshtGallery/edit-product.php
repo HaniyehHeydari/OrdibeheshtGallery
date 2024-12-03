@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body dir="rtl">
     <main>
-        <h2>ویرایش محصول</h2>
+        <h1>ویرایش محصول</h1>
         <form action="" method="POST" enctype="multipart/form-data">
             <div id="name">
                 <label for="productname">نام محصول:</label>

@@ -32,33 +32,54 @@ $result = $conn->query($sql);
         <p>صفحه اصلی</p>
       </a>
     </div>
+    <div class="dropdown-container">
+      <a href="#">
+        <p>محصولات</p>
+        <img src="https://ibolak.com/assets/icons/arrow-down.svg" />
+      </a>
+      <div class="dropdown">
+        <a href="#">
+          <h4>محصولات 1</h4>
+          <p>مانتو و تن پوش پاییزه و زمستانه</p>
+          <p>مانتو و تن پوش بهاره و تابستانه</p>
+          <p>تخفیف ها</p>
+          <p>شال و روسری هنری</p>
+          <p>فروش ویژه</p>
+        </a>
+        <a href="#">
+          <h4>محصولات 2</h4>
+          <p>کیف دوشی</p>
+          <p>ساک دستی ها</p>
+          <p>کیف کارت</p>
+          <p>کیف پول</p>
+          <p>کوله پشتی</p>
+        </a>
+        <a href="#">
+          <h4>محصولات 3</h4>
+          <p>بند دوربین عکاسی</p>
+          <p>انگشتر و گوشواره</p>
+          <p>ماهی سه بعدی</p>
+          <p>تزئینی و دکور</p>
+          <p>صندوقچه چوبی</p>
+          <p>رومیزی و رانر</p>
+          <p>عروسک ها</p>
+        </a>
+      </div>
+    </div>
     <div>
       <a href="#">
-        <p>زنانه</p>
-        <img src="https://ibolak.com/assets/icons/arrow-down.svg" />
+        <p>کد مرسولات پستی</p>
+
       </a>
     </div>
     <div>
       <a href="#">
-        <p>مردانه</p>
-        <img src="https://ibolak.com/assets/icons/arrow-down.svg" />
+        <p>محصولات ارسال رایگان</p>
       </a>
     </div>
     <div>
       <a href="#">
-        <p>بچگانه</p>
-        <img src="https://ibolak.com/assets/icons/arrow-down.svg" />
-      </a>
-    </div>
-    <div>
-      <a href="#">
-        <p>کیف</p>
-      </a>
-    </div>
-    <div class="Hat-Shawl-Scarf">
-      <a href="#">
-        <p>کلاه/شال/روسری</p>
-        <img src="https://ibolak.com/assets/icons/arrow-down.svg" />
+        <p>تخفیف ها</p>
       </a>
     </div>
     <div>
@@ -142,6 +163,7 @@ $result = $conn->query($sql);
       </div>
     </div>
   </main>
+  <br>
 
   <?php include('Footer.php') ?>
 

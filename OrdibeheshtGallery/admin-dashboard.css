@@ -2,6 +2,10 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   margin: 0;
+  height: 100vh;
+  /* افزودن ارتفاع کامل به بدن */
+  overflow: hidden;
+  /* جلوگیری از اسکرول بدنه */
 }
 
 .sidebar {
@@ -10,12 +14,21 @@ body {
   padding: 20px;
   height: 100vh;
   font-size: 18px;
+  position: fixed;
+  /* ثابت کردن sidebar */
+  top: 0;
+  right: 0;
 }
 
 .content {
-  margin-right: 80px;
+  margin-right: 258px;
+  /* افزودن margin برای جایگاه sidebar */
   padding: 20px;
   flex-grow: 1;
+  overflow-y: auto;
+  /* اجازه اسکرول به محتوای داخلی */
+  height: 100vh;
+  /* تنظیم ارتفاع برای تطابق با بدن */
 }
 
 .sidebar a {
@@ -28,7 +41,7 @@ body {
 }
 
 .product-table {
-  width: 1066px;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -47,10 +60,9 @@ body {
 }
 
 .product-table img {
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 258px;
   border-radius: 16px;
-
 }
 
 .btn-edit,
@@ -80,4 +92,21 @@ body {
   color: black;
   font-size: 20px;
   padding: 10px 20px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #6c757d;
 }
