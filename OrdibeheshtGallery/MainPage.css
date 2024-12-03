@@ -68,8 +68,8 @@
   color: #323232;
   font-size: 19px;
   border-radius: 10px;
-  border: 1px solid #26adf8;
-  background-color: #26adf8;
+  border: 1px solid rgb(167, 148, 188);
+  background-color: rgb(167, 148, 188);
 }
 
 .User-Account p {
@@ -138,6 +138,10 @@
   color: #323232;
   margin-right: 30px;
   text-decoration: none;
+}
+
+.Navbar div a:hover{
+  color: rgb(167, 148, 188) ;
 }
 
 /* Main */
@@ -251,7 +255,7 @@ button {
   height: 300px;
   float: right;
   margin-right: 50px;
-  margin-top: 36px;
+  margin-top: 110px;
 }
 
 .Footer-Left-Right-Top {
@@ -346,7 +350,8 @@ button {
   width: 93%;
   margin-left: 49px;
   border-radius: 16px;
-  background-color: #26adf8;
+  background-color: rgb(167, 148, 188);
+  padding-top: 16px;
 }
 
 .product-details {

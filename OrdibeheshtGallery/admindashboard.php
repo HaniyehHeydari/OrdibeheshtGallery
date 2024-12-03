@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>admin-dashboard</title>
-    <link rel="stylesheet" href="./admindashboard.css" />
+    <link rel="stylesheet" href="./admin-dashboard.css" />
 
 </head>
 

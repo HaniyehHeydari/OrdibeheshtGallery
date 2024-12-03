@@ -121,7 +121,7 @@ $result = $conn->query($sql);
       </div>
     </div>
     <div class="hi">
-      <h2 dir="rtl" style="color: #FFFFFF;">جدیدترین محصولات</h2>
+      <h2 dir="rtl" style="color: #FFFFFF; margin-right:23px">جدیدترین محصولات</h2>
       <div class="product-grid">
         <?php
         if ($result->num_rows > 0) {

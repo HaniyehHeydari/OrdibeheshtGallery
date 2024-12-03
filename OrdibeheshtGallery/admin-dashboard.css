@@ -6,7 +6,7 @@ body {
 
 .sidebar {
   width: 200px;
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
   padding: 20px;
   height: 100vh;
   font-size: 18px;
@@ -63,7 +63,8 @@ body {
 }
 
 .btn-edit {
-  background-color: #26adf8;
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
   border-radius: 10px;
   text-decoration: none;
   color: black;
@@ -72,7 +73,8 @@ body {
 }
 
 .btn-delete {
-  background-color: #26adf8;
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
   border-radius: 10px;
   text-decoration: none;
   color: black;

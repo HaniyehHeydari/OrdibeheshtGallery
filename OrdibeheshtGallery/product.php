@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>مدیریت محصولات</title>
-    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="./productt.css">
 </head>
 
 <body dir="rtl">

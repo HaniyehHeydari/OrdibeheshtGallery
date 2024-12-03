@@ -25,7 +25,7 @@ $product = $result->fetch_assoc();
 </head>
 
 <body dir="rtl">
-    <?php include('Header.php') ?>
+<?php include('Header.php') ?>
 
     <main>
         <div class="hii">

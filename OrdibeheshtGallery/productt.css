@@ -27,9 +27,9 @@ form {
 #product_description,
 #product_price,
 #product_image {
-  border: 1px solid rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
+  border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
-  background-color: rgb(232, 240, 254);
   padding: 15px;
   width: 470px;
   margin-top: 10px;
@@ -50,8 +50,8 @@ form {
 }
 
 button {
-  background-color: #26adf8;
-  border: 1px solid #26adf8;
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
   border-radius: 10px;
   color: white;
   height: 55px;

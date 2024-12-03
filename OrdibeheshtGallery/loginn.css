@@ -40,9 +40,9 @@ body {
 #emailuser,
 #phoneNumbers,
 #pass input {
-  border: 1px solid rgb(232, 240, 254);
+  border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
   padding: 15px;
   width: 470px;
 }
@@ -52,9 +52,9 @@ body {
 }
 
 #pass {
-  border: 1px solid rgb(232, 240, 254);
+  border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
   padding: 15px;
   width: 470px;
 }
@@ -65,21 +65,6 @@ body {
   padding-bottom: 20px;
   text-decoration: none;
   width: 190px;
-}
-
-#pass:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#phoneNumbers:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#emailuser:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
 }
 
 #emailuser:focus {
@@ -117,8 +102,8 @@ body {
 }
 
 #open {
-  background-color: #26adf8;
-  border: 1px solid #26adf8;
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
   border-radius: 10px;
   color: white;
   height: 55px;
@@ -126,11 +111,6 @@ body {
   text-align: center;
   margin-top: 20px;
   font-size: larger;
-}
-
-#open:hover {
-  cursor: pointer;
-  background-color: #009ef7;
 }
 
 img {

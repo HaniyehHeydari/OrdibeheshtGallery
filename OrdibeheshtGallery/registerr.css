@@ -37,9 +37,9 @@ body {
 #emailuser,
 #pass,
 #phoneNumbers {
-  border: 1px solid rgb(232, 240, 254);
+  border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
   padding: 15px;
   width: 470px;
   margin-top: 20px;
@@ -55,35 +55,11 @@ body {
   outline: none;
 }
 
-#pass:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#fullname:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#emailuser:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#nationalCode:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
-
-#emailuser:hover {
-  border: 1px solid rgba(182, 214, 242, 0.827);
-  background-color: rgba(196, 223, 248, 0.988);
-}
 
 #educationLevel {
-  border: 1px solid rgb(232, 240, 254);
+  border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(243, 237, 250);
   padding: 15px;
   width: 500px;
   margin-top: 20px;
@@ -115,8 +91,8 @@ option {
 }
 
 #sabtnam {
-  background-color: #26adf8;
-  border: 1px solid #26adf8;
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
   border-radius: 10px;
   color: white;
   height: 65px;
@@ -124,11 +100,6 @@ option {
   text-align: center;
   margin-top: 20px;
   font-size: larger;
-}
-
-#sabtnam:hover {
-  cursor: pointer;
-  background-color: #009ef7;
 }
 
 #google {
