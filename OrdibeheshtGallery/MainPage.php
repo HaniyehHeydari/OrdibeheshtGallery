@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./Main-Page.css" />
+  <link rel="stylesheet" href="./MainPage.css" />
   <title>ibolak</title>
 </head>
 
@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 
   <nav class="Navbar">
     <div>
-      <a href="./Main-Page.php">
+      <a href="./MainPage.php">
         <p>صفحه اصلی</p>
       </a>
     </div>
@@ -145,7 +145,7 @@ $result = $conn->query($sql);
 
   <?php include('Footer.php') ?>
 
-  <script src="./Main-Page.js"></script>
+  <script src="./MainPage.js"></script>
 </body>
 
 </html>

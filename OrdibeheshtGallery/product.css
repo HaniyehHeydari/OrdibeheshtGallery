@@ -23,10 +23,10 @@ form {
   flex-direction: column;
 }
 
-#productname,
-#productdescription,
-#productprice,
-#productimage {
+#product_name,
+#product_description,
+#product_price,
+#product_image {
   border: 1px solid rgb(232, 240, 254);
   border-radius: 20px;
   background-color: rgb(232, 240, 254);
@@ -35,10 +35,10 @@ form {
   margin-top: 10px;
 }
 
-#productname,
-#productdescription,
-#productprice,
-#productimage:focus {
+#product_name,
+#product_description,
+#product_price,
+#product_image:focus {
   outline: none;
 }
 

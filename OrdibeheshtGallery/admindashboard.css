@@ -5,7 +5,7 @@ body {
 }
 
 .sidebar {
-  width: 150px;
+  width: 200px;
   background-color: rgb(232, 240, 254);
   padding: 20px;
   height: 100vh;
@@ -13,6 +13,7 @@ body {
 }
 
 .content {
+  margin-right: 80px;
   padding: 20px;
   flex-grow: 1;
 }
@@ -27,7 +28,7 @@ body {
 }
 
 .product-table {
-  width: 755px;
+  width: 1066px;
   border-collapse: collapse;
 }
 
@@ -48,6 +49,7 @@ body {
 .product-table img {
   width: 200px;
   height: 200px;
+  border-radius: 16px;
 
 }
 

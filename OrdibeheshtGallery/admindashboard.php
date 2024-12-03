@@ -15,7 +15,7 @@ $conn->query("SET NAMES utf8");
 
 // بررسی ورود ادمین
 if (!isset($_SESSION['user']) || $_SESSION['user_type'] != 'admin') {
-    header("Location: ../login_register/login.php");
+    header("Location: ../login.php");
     exit();
 }
 
@@ -35,7 +35,7 @@ $result = $conn->query($sql);
 
 <body dir="rtl">
     <div class="sidebar">
-        <a href="./Main-Page.php">صفحه اصلی</a>
+        <a href="./MainPage.php">صفحه اصلی</a>
         <a href="./product.php">افزودن محصول</a>
         <a href="./logout-validation.php">خروج</a>
     </div>
@@ -44,8 +44,8 @@ $result = $conn->query($sql);
             <tr>
                 <th>تصویر</th>
                 <th>نام محصول</th>
-                <th>قیمت</th>
                 <th>توضیحات</th>
+                <th>قیمت</th>
                 <th>عملیات</th>
             </tr>
             <?php
@@ -54,8 +54,8 @@ $result = $conn->query($sql);
                     echo "<tr>";
                     echo "<td><img src='uploads/" . $row['productimage'] .  "' alt='Product Image' ></td>";
                     echo "<td>" . $row['productname'] . "</td>";
-                    echo "<td>" . $row['productprice'] . "</td>";
                     echo "<td>" . $row['productdescription'] . "</td>";
+                    echo "<td>" . $row['productprice'] . "</td>";
                     echo "<td>
                             <a href='edit-product.php?id=" . $row['id'] . "' class='btn-edit'>ویرایش</a>
                             <a href='delete-product.php?id=" . $row['id'] . "' class='btn-delete' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>

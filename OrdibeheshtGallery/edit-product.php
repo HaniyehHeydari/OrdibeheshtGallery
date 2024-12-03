@@ -60,29 +60,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <title>ویرایش محصول</title>
-    <link rel="stylesheet" href="./admindashboard.css" />
+    <title>edit-product</title>
+    <link rel="stylesheet" href="./product.css" />
 </head>
 
-<body>
-    <div class="content">
+<body dir="rtl">
+    <main>
         <h2>ویرایش محصول</h2>
         <form action="" method="POST" enctype="multipart/form-data">
-            <label for="product_name">نام محصول:</label>
-            <input type="text" id="product_name" name="product_name" value="<?php echo $row['productname']; ?>" required><br>
-
-            <label for="product_price">قیمت محصول:</label>
-            <input type="text" id="product_price" name="product_price" value="<?php echo $row['productprice']; ?>" required><br>
-
-            <label for="product_description">توضیحات محصول:</label>
-            <textarea id="product_description" name="product_description" required><?php echo $row['productdescription']; ?></textarea><br>
-
-            <label for="product_image">تصویر محصول:</label>
-            <input type="file" id="product_image" name="product_image"><br>
-
+            <div id="name">
+                <label for="productname">نام محصول:</label>
+                <input type="text" id="product_name" name="product_name" value="<?php echo $row['productname']; ?>" required><br>
+            </div>
+            <div id="description">
+                <label for="productdescription">توضیحات محصول:</label>
+                <textarea id="product_description" name="product_description" required><?php echo $row['productdescription']; ?></textarea><br>
+            </div>
+            <div id="price">
+                <label for="productprice">قیمت محصول:</label>
+                <input type="text" id="product_price" name="product_price" value="<?php echo $row['productprice']; ?>" required><br>
+            </div>
+            <div id="image">
+                <label for="productimage">تصویر محصول:</label>
+                <input type="file" id="product_image" name="product_image"><br>
+            </div>
             <button type="submit">ثبت تغییرات</button>
         </form>
-    </div>
+    </main>
 </body>
 
 </html>

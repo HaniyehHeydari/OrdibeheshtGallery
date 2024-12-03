@@ -8,21 +8,21 @@ if ($conn->connect_error) {
 $conn->query("SET NAMES utf8");
 
 if (!isset($_SESSION['user']) || $_SESSION['user_type'] != 'admin') {
-    header("Location: ../login_register/login.php");
+    header("Location: ../login.php");
     exit();
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $productName = $_POST['productname'];
-    $productDescription = $_POST['productdescription'];
-    $productPrice = $_POST['productprice'];
-    $productImage = $_FILES['productimage']['name'];
+    $productName = $_POST['product_name'];
+    $productDescription = $_POST['product_description'];
+    $productPrice = $_POST['product_price'];
+    $productImage = $_FILES['product_image']['name'];
 
     // مسیر ذخیره‌سازی تصویر
     $targetDir = "uploads/";
-    $targetFile = $targetDir . basename($_FILES["productimage"]["name"]);
+    $targetFile = $targetDir . basename($_FILES["product_image"]["name"]);
 
-    if (move_uploaded_file($_FILES["productimage"]["tmp_name"], $targetFile)) {
+    if (move_uploaded_file($_FILES["product_image"]["tmp_name"], $targetFile)) {
         // آماده‌سازی و اجرای کوئری SQL
         $stmt = $conn->prepare("INSERT INTO products (productname, productdescription, productprice, productimage) VALUES (?, ?, ?, ?)");
         if ($stmt === false) {
