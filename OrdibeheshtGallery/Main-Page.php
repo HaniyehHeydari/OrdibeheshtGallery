@@ -120,29 +120,27 @@ $result = $conn->query($sql);
         </div>
       </div>
     </div>
-    <h1>محصولات</h1>
-    <table border="1">
-      <tr>
-        <th>تصویر</th>
-        <th>نام</th>
-        <th>قیمت</th>
-        <th>توضیحات</th>
-      </tr>
-      <?php
-      if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-          echo "<tr>";
-          echo "<td><img src='uploads/" . $row['productimage'] . "' width='100'></td>";
-          echo "<td>" . $row['productname'] . "</td>";
-          echo "<td>" . $row['productprice'] . "</td>";
-          echo "<td>" . $row['productdescription'] . "</td>";
-          echo "</tr>";
+    <div class="hi">
+      <h2 dir="rtl" style="color: #FFFFFF;">جدیدترین محصولات</h2>
+      <div class="product-grid">
+        <?php
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            echo "<div class='product-card'>";
+            echo "<a href='detailes-product.php?id=" . $row['id'] . "'>";
+            echo "<img src='uploads/" . $row['productimage'] . "' alt='" . $row['productname'] . "' class='product-image'>";
+            echo "</a>";
+            echo "<h3 class='product-name'>" . $row['productname'] . "</h3>";
+            echo "<p class='product-description'>" . $row['productdescription'] . "</p>";
+            echo "<h2 class='product-price'>" . number_format($row['productprice']) . " تومان</h2>";
+            echo "</div>";
+          }
+        } else {
+          echo "<p>هیچ محصولی یافت نشد</p>";
         }
-      } else {
-        echo "<tr><td colspan='4'>هیچ محصولی یافت نشد</td></tr>";
-      }
-      ?>
-    </table>
+        ?>
+      </div>
+    </div>
   </main>
 
   <?php include('Footer.php') ?>

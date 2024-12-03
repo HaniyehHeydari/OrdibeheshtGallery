@@ -57,8 +57,8 @@ $result = $conn->query($sql);
                     echo "<td>" . $row['productprice'] . "</td>";
                     echo "<td>" . $row['productdescription'] . "</td>";
                     echo "<td>
-                            <a href='edit_product.php?id=" . $row['id'] . "' class='btn-edit'>ویرایش</a>
-                            <a href='delete_product.php?id=" . $row['id'] . "' class='btn-delete' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>
+                            <a href='edit-product.php?id=" . $row['id'] . "' class='btn-edit'>ویرایش</a>
+                            <a href='delete-product.php?id=" . $row['id'] . "' class='btn-delete' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>
                           </td>";
                     echo "</tr>";
                 }

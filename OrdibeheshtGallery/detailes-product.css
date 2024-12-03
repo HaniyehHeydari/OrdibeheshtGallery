@@ -1,0 +1,38 @@
+.product-detailss {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.product-details-imagee {
+    max-width: 30%;
+    border-radius: 16px;
+    margin-right: 20px;
+}
+
+.product-details-infoo {
+    max-width: 50%;
+    direction: rtl;
+}
+
+.product-details-infoo h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-details-infoo p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product-details-infoo h2 {
+    font-size: 22px;
+    color: red;
+}
+
+.hii {
+    width: 93%;
+    margin-left: 49px;
+    border: 1px solid black;
+    border-radius: 16px;
+}
