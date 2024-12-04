@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>مدیریت محصولات</title>
-    <link rel="stylesheet" href="./productt.css">
+    <link rel="stylesheet" href="./product.css">
 </head>
 
 <body dir="rtl">

@@ -20,19 +20,21 @@ $product = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./detailes-product.css" />
+    <link rel="stylesheet" href="./detailesproduct.css" />
     <title><?php echo $product['productname']; ?></title>
 </head>
 
 <body dir="rtl">
-<?php include('Header.php') ?>
+    <?php include('Header.php') ?>
 
     <main>
         <div class="hii">
             <div class="product-detailss">
                 <img src="uploads/<?php echo $product['productimage']; ?>" alt="<?php echo $product['productname']; ?>" class="product-details-imagee">
                 <div class="product-details-infoo">
-                    <h1><?php echo $product['productname']; ?></h1>
+                    <div class="title">
+                        <h1><?php echo $product['productname']; ?></h1>
+                    </div>
                     <p><?php echo $product['productdescription']; ?></p>
                     <h2><?php echo number_format($product['productprice']); ?> تومان</h2>
                 </div>
