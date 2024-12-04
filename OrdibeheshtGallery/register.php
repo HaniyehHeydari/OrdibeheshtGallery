@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>register</title>
-  <link rel="stylesheet" href="./register.css" />
+  <link rel="stylesheet" href="./registerr.css" />
 </head>
 
 <body dir="rtl">
@@ -39,6 +39,14 @@
         <input type="password" id="pass" name="password" placeholder="********" title="لطفا یک رمز عبور معتبر وارد کنید." />
         <?php if (isset($errors['password'])): ?>
           <span class="error-message"><?= $errors['password'] ?></span>
+        <?php endif; ?>
+      </div>
+
+      <div id="addres">
+        <label for="addresuser">آدرس</label>
+        <input type="text" id="pass" name="addres" placeholder="گرگان عدالت 102" title="لطفا یک آدرس وارد کنید." />
+        <?php if (isset($errors['addres'])): ?>
+          <span class="error-message"><?= $errors['addres'] ?></span>
         <?php endif; ?>
       </div>
 

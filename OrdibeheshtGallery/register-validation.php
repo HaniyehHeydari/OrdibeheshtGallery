@@ -9,13 +9,16 @@ $errors = [];
 $fullname = '';
 $email = '';
 $password = '';
+$addres = '';
 $education = '';
 $gender = '';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = isset($_POST['fullname']) ? $_POST['fullname'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $addres= isset($_POST['addres']) ? $_POST['addres'] : '';
     $education = isset($_POST['education']) ? $_POST['education'] : '';
     $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
 
@@ -46,13 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['gender'] = 'لطفا جنسیت خود را انتخاب کنید';
     }
 
+    if (empty($addres)) {
+        $errors['addres'] = 'لطفا آدرس خود را انتخاب کنید';
+    }
+
     if (count($errors) === 0) {
-        $sql = "INSERT INTO users (fullname, email, password, education, gender) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (fullname, email, password, addres, education, gender) VALUES (?, ?, ?, ?, ?, ?)";
         $execute = $conn->prepare($sql);
         $result = $execute->execute([
             $fullname,
             $email,
             $password,
+            $addres,
             $education,
             $gender
         ]);

@@ -30,14 +30,22 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <title>admin-dashboard</title>
     <link rel="stylesheet" href="./admin-dashboard.css" />
-
 </head>
 
 <body dir="rtl">
     <div class="sidebar">
-        <a href="./MainPage.php">صفحه اصلی</a>
-        <a href="./product.php">افزودن محصول</a>
-        <a href="./logout-validation.php">خروج</a>
+        <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:50px" href="./MainPage.php">
+            <h3>صفحه اصلی</h3>
+            <img src="./img/1.png" width="30px" height="30px" />
+        </a>
+        <a style="display: flex; align-items: center; direction: ltr; padding-left:35px" href="./product.php">
+            <h3>افزودن محصول</h3>
+            <img src="./img/2.jpg" width="40px" height="40px" />
+        </a>
+        <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:95px" href="./logout-validation.php">
+            <h3>خروج</h3>
+            <img src="./img/3.png" width="30px" height="30px" />
+        </a>
     </div>
     <div class="content">
         <table class="product-table">
