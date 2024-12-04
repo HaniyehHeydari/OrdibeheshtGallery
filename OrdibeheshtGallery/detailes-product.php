@@ -20,7 +20,7 @@ $product = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./detailesproduct.css" />
+    <link rel="stylesheet" href="./details-product.css" />
     <title><?php echo $product['productname']; ?></title>
 </head>
 
@@ -37,6 +37,18 @@ $product = $result->fetch_assoc();
                     </div>
                     <p><?php echo $product['productdescription']; ?></p>
                     <h2><?php echo number_format($product['productprice']); ?> تومان</h2>
+
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <form action="add-to-cart.php" method="post" class="add-to-cart-form">
+                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                            <button type="submit">
+                                <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 33px;" />
+                                افزودن به سبد خرید</button>
+                        </form>
+                    <?php else: ?>
+                        <p>برای افزودن به سبد خرید، لطفاً <a href="./login.php" style="text-decoration: none;">وارد شوید</a>.</p>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

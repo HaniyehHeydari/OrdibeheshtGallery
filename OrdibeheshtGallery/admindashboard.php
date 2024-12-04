@@ -29,22 +29,22 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>admin-dashboard</title>
-    <link rel="stylesheet" href="./admin-dashboard.css" />
+    <link rel="stylesheet" href="./admindashboard.css" />
 </head>
 
 <body dir="rtl">
     <div class="sidebar">
-        <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:50px" href="./MainPage.php">
-            <h3>صفحه اصلی</h3>
-            <img src="./img/1.png" width="30px" height="30px" />
+        <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:60px" href="./MainPage.php">
+            <h4>صفحه اصلی</h4>
+            <img src="./img/1.png" width="20px" height="20px" />
         </a>
-        <a style="display: flex; align-items: center; direction: ltr; padding-left:35px" href="./product.php">
-            <h3>افزودن محصول</h3>
-            <img src="./img/2.jpg" width="40px" height="40px" />
+        <a style="display: flex; align-items: center; direction: ltr; padding-left:45px" href="./product.php">
+            <h4>افزودن محصول</h4>
+            <img src="./img/2.jpg" width="30px" height="30px" />
         </a>
         <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:95px" href="./logout-validation.php">
-            <h3>خروج</h3>
-            <img src="./img/3.png" width="30px" height="30px" />
+            <h4>خروج</h4>
+            <img src="./img/3.png" width="20px" height="20px" />
         </a>
     </div>
     <div class="content">
