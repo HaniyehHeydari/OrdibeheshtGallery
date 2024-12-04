@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>register</title>
-  <link rel="stylesheet" href="./registerr.css" />
+  <link rel="stylesheet" href="./register.css" />
 </head>
 
 <body dir="rtl">
@@ -64,7 +64,7 @@
       <button name="button" id="sabtnam" type="submit">ثبت نام</button>
 
       <p id="sabt">
-        قبلا ثبت نام کرده اید؟<a href="login.php" id="vorodhesab">ورود به حساب</a>
+        قبلا ثبت نام کرده اید؟<a href="login.php" id="vorodhesab"> ورود به حساب</a>
       </p>
     </form>
   </div>

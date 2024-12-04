@@ -11,9 +11,9 @@
 
 <body dir="rtl">
 
-<div class="main">
+    <div class="main">
         <form id="form-sign" name="login" method="POST">
-        
+
             <div>
                 <img src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
             </div>
@@ -31,13 +31,13 @@
             <div class="accont">
                 <a id="forget" href="#">کلمه عبور خود را فراموش کرده اید؟</a>
                 <p id="sabt">
-                    حساب کاربری ندارید؟<a href="register.php" id="sabtnam">ثبت نام</a>
+                    حساب کاربری ندارید؟<a href="register.php" id="sabtnam"> ثبت نام</a>
                 </p>
             </div>
         </form>
     </div>
     <script src="/login.js"></script>
-    
+
 </body>
 
 </html>
