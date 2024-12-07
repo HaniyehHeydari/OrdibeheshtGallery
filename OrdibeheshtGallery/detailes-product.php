@@ -42,18 +42,23 @@ $product = $result->fetch_assoc();
                     <p><?php echo $product['productdescription']; ?></p>
                     <h2><?php echo number_format($product['productprice']); ?> تومان</h2>
 
-                    <?php if (isset($_SESSION['user'])): ?>
-                        <form action="add-to-cart.php" method="post" class="add-to-cart-form">
-                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                            <div>
-                                <button type="submit">
-                                    <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 33px;" />
-                                    افزودن به سبد خرید</button>
-                                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
-                            </div>
-                        </form>
+                    <?php if ($product['productstock'] > 0): ?>
+                        <p>وضعیت: موجود</p>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <form action="add-to-cart.php" method="post" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+                                <div>
+                                    <button type="submit">
+                                        <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 33px;" />
+                                        افزودن به سبد خرید</button>
+                                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                                </div>
+                            </form>
+                        <?php else: ?>
+                            <p>برای افزودن به سبد خرید، لطفاً <a href="./login.php" style="text-decoration: none;">وارد شوید</a>.</p>
+                        <?php endif; ?>
                     <?php else: ?>
-                        <p>برای افزودن به سبد خرید، لطفاً <a href="./login.php" style="text-decoration: none;">وارد شوید</a>.</p>
+                        <p>وضعیت: ناموجود</p>
                     <?php endif; ?>
                 </div>
             </div>
