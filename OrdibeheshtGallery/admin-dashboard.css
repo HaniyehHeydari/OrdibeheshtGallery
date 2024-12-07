@@ -51,6 +51,8 @@ body {
 .product-table {
   width: 100%;
   border-collapse: collapse;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 10px #ecebe9;
 }
 
 .product-table th {
@@ -68,7 +70,7 @@ body {
 }
 
 .product-table img {
-  width: 210px;
+  width: 200px;
   height: 258px;
   border-radius: 16px;
 }
@@ -117,4 +119,8 @@ body {
 .product-description {
   font-size: 16px;
   color: #6c757d;
+}
+
+.h{
+  width: 700px;
 }

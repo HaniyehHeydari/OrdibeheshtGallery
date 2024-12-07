@@ -13,11 +13,16 @@ if (!isset($_SESSION['user']) || $_SESSION['user_type'] != 'admin') {
 }
 
 $errors = [];
-$productName = $productDescription = $productPrice = $productImage = '';
+$productName = $productDescription = $productMaterial = $productSize = $productColor = $productHeight = $productStock =  $productPrice = $productImage = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productName = trim($_POST['product_name']);
     $productDescription = trim($_POST['product_description']);
+    $productMaterial = trim($_POST['product_material']);
+    $productSize = trim($_POST['product_size']);
+    $productColor = trim($_POST['product_color']);
+    $productHeight = trim($_POST['product_height']);
+    $productStock = trim($_POST['product_stock']);
     $productPrice = trim($_POST['product_price']);
     $productImage = $_FILES['product_image']['name'];
 
@@ -29,6 +34,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // اعتبارسنجی توضیحات محصول
     if (empty($productDescription)) {
         $errors['product_description'] = "لطفا توضیحات محصول را وارد کنید";
+    }
+
+    // اعتبارسنجی جنس محصول
+    if (empty($productMaterial)) {
+        $errors['product_material'] = "لطفا جنس محصول را وارد کنید";
+    }
+
+    // اعتبارسنجی سایز محصول
+    if (empty($productSize)) {
+        $errors['product_size'] = "لطفا سایز محصول را وارد کنید";
+    }
+
+    // اعتبارسنجی رنگ محصول
+    if (empty($productColor)) {
+        $errors['product_color'] = "لطفا رنگ محصول را وارد کنید";
+    }
+
+    // اعتبارسنجی قد محصول
+    if (empty($productHeight)) {
+        $errors['product_height'] = "لطفا قد محصول را وارد کنید";
+    }
+
+     // اعتبارسنجی موجودی محصول
+     if (empty($productStock)) {
+        $errors['product_stock'] = "لطفا تعداد محصول را وارد کنید";
     }
 
     // اعتبارسنجی قیمت محصول
@@ -51,14 +81,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // اگر هیچ خطایی وجود نداشت، محصول را در دیتابیس ثبت کن
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO products (productname, productdescription, productprice, productimage) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO products (productname, productdescription, productmaterial, productsize, productcolor, productheight, productprice, productimage) VALUES (?, ?, ?, ?)");
         if ($stmt === false) {
             $_SESSION['message'] = "خطا در آماده‌سازی کوئری: " . $conn->error;
             header("Location: product.php");
             exit();
         }
 
-        $stmt->bind_param("ssds", $productName, $productDescription, $productPrice, $productImage);
+        $stmt->bind_param("ssds", $productName, $productDescription, $productMaterial, $productSize, $productColor, $productHeight , $productPrice, $productImage);
 
         if ($stmt->execute()) {
             $_SESSION['message'] = "محصول با موفقیت ثبت شد.";

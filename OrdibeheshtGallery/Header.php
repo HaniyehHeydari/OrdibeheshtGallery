@@ -27,7 +27,7 @@
                         <?php
                         if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
                         ?>
-                            <span><?php echo 'حساب کاربری'; ?></span>
+                            <span><?php echo $_SESSION['fullname']; ?></span>
                         <?php } else { ?>
                             <p>ورود / ثبت نام</p>
                         <?php } ?>

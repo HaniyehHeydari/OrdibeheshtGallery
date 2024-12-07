@@ -11,7 +11,7 @@ h1 {
 main {
     background-color: white;
     width: 500px;
-    height: 750px;
+    height: 1280px;
     padding: 50px;
     margin-top: 20px;
     padding: 50px;
@@ -27,6 +27,11 @@ form {
 #product_name,
 #product_description,
 #product_price,
+#product_material,
+#product_size,
+#product_color,
+#product_height,
+#product_stock,
 #product_image {
     background-color: rgb(243, 237, 250);
     border: 1px solid rgb(243, 237, 250);
@@ -39,12 +44,22 @@ form {
 #product_name,
 #product_description,
 #product_price,
+#product_material,
+#product_size,
+#product_color,
+#product_height,
+#product_stock,
 #product_image:focus {
     outline: none;
 }
 
 #name,
 #description,
+#material,
+#size,
+#color,
+#height,
+#stock,
 #price,
 #image {
     margin-top: 30px;

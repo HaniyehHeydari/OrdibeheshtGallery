@@ -47,9 +47,64 @@ session_start();
                 }
                 ?>
             </div>
+            <div id="material">
+                <label for="productprice">جنس</label><br />
+                <input type="text" id="product_material" name="product_material" value="<?php echo isset($_SESSION['old_data']['product_material']) ? $_SESSION['old_data']['product_material'] : ''; ?>">
+                <?php
+                if (isset($_SESSION['errors']['product_material'])) {
+                    echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_material'] . "</p>";
+                    unset($_SESSION['errors']['product_material']);
+                }
+                ?>
+            </div>
+            <div id="size">
+                <label for="productprice">سایز</label><br />
+                <input type="text" id="product_size" name="product_size" value="<?php echo isset($_SESSION['old_data']['product_size']) ? $_SESSION['old_data']['product_size'] : ''; ?>">
+                <?php
+                if (isset($_SESSION['errors']['product_size'])) {
+                    echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_size'] . "</p>";
+                    unset($_SESSION['errors']['product_size']);
+                }
+                ?>
+            </div>
+            <div id="color">
+                <label for="productprice">رنگ</label><br />
+                <input type="text" id="product_color" name="product_color" value="<?php echo isset($_SESSION['old_data']['product_color']) ? $_SESSION['old_data']['product_color'] : ''; ?>">
+                <?php
+                if (isset($_SESSION['errors']['product_color'])) {
+                    echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_color'] . "</p>";
+                    unset($_SESSION['errors']['product_color']);
+                }
+                ?>
+            </div>
+            <div id="height">
+                <label for="productprice">قد</label><br />
+                <input type="text" id="product_height" name="product_height" value="<?php echo isset($_SESSION['old_data']['product_height']) ? $_SESSION['old_data']['product_height'] : ''; ?>">
+                <?php
+                if (isset($_SESSION['errors']['product_height'])) {
+                    echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_height'] . "</p>";
+                    unset($_SESSION['errors']['product_height']);
+                }
+                ?>
+            </div>
+            <div id="stock">
+                <label for="productprice">تعداد</label><br />
+                <input type="text" id="product_stock" name="product_stock" value="<?php echo isset($_SESSION['old_data']['product_stock']) ? $_SESSION['old_data']['product_stock'] : ''; ?>">
+                <?php
+                if (isset($_SESSION['errors']['product_stock'])) {
+                    echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_stock'] . "</p>";
+                    unset($_SESSION['errors']['product_stock']);
+                }
+                ?>
+            </div>
             <div id="price">
                 <label for="productprice">قیمت</label><br />
-                <input type="text" id="product_price" name="product_price" value="<?php echo isset($_SESSION['old_data']['product_price']) ? $_SESSION['old_data']['product_price'] : ''; ?>">
+                <input type="text" id="product_price" name="product_price">
                 <?php
                 if (isset($_SESSION['errors']['product_price'])) {
                     echo "<p style='color: red;     font-size: 12px;
