@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($users['type'] == 0) {
                     $_SESSION['user_type'] = 'public';
                     // هدایت به صفحه اصلی برای کاربران عمومی
-                    header("Location: ../OrdibeheshtGallery/MainPage.php");
+                    header("Location: profile.php");
                 } else {
                     $_SESSION['user_type'] = 'admin';
                     // هدایت به داشبورد ادمین

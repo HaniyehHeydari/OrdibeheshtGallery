@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // اگر هیچ خطایی وجود نداشت، محصول را در دیتابیس ثبت کن
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO products (productname, productdescription, productmaterial, productsize, productcolor, productheight, productprice, productimage) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO products (productname, productdescription, productmaterial, productsize, productcolor, productheight, productprice, productimage) VALUES (?, ?, ?, ? , ?, ?, ?, ?)");
         if ($stmt === false) {
             $_SESSION['message'] = "خطا در آماده‌سازی کوئری: " . $conn->error;
             header("Location: product.php");

@@ -1,0 +1,441 @@
+/* Header */
+
+.Container {
+  background-color: white;
+}
+
+.Container-One {
+  width: 95%;
+  height: 90px;
+  margin-left: 38px;
+  margin-top: 30px;
+}
+
+.Logo-One {
+  float: right;
+}
+
+.Container-One-Left {
+  float: left;
+  width: 80%;
+  height: 90px;
+}
+
+.Search {
+  float: right;
+  direction: rtl;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 30px;
+  border-radius: 10px;
+  color: #212529;
+  border: 1px solid #d9d9d6;
+  background-color: #d9d9d6;
+}
+
+.Search_Key {
+  width: 100%;
+  height: 40px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #d9d9d6;
+  background-color: #d9d9d6;
+}
+
+.Search_Key:focus {
+  outline: none;
+}
+
+.Search-Img {
+  margin-left: 15px;
+}
+
+.User-Account {
+  float: right;
+  direction: rtl;
+  width: 21%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 30px;
+  text-decoration: none;
+  color: #323232;
+  font-size: 19px;
+  border-radius: 10px;
+  border: 1px solid rgb(167, 148, 188);
+  background-color: rgb(167, 148, 188);
+}
+
+.User-Account p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Basket {
+  float: left;
+  direction: rtl;
+  width: 18%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 22px;
+  text-decoration: none;
+  color: #323232;
+  font-size: 19px;
+  border-radius: 10px;
+  border: 1px solid #a1a18e;
+  background-color: white;
+}
+
+.Basket p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.Zero {
+  width: 24px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  color: #323232;
+  background-color: #ecebe9;
+  padding-bottom: 4px;
+}
+
+.Basket:hover {
+  border: 1px solid #808080;
+  background-color: #808080;
+  color: white;
+}
+
+.Navbar {
+  width: 95%;
+  height: 95px;
+  margin-left: 38px;
+}
+
+.Navbar div a {
+  float: right;
+  direction: rtl;
+  height: 95px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #323232;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.Navbar div a:hover {
+  color: rgb(167, 148, 188);
+}
+
+/* Main */
+.product-details {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.product-details-image {
+  max-width: 50%;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+
+.product-details-info {
+  max-width: 50%;
+  direction: rtl;
+}
+
+.product-details-info h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-details-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.product-details-info h2 {
+  font-size: 22px;
+  color: red;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  left: 10px;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  right: 10px;
+}
+
+.Navbar div {
+  position: relative;
+  /* برای داشتن موقعیت صحیح منوی کشویی */
+}
+
+.Navbar div a {
+  float: right;
+  direction: rtl;
+  height: 95px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #323232;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.Navbar div a:hover {
+  color: rgb(167, 148, 188);
+}
+
+/* استایل برای منوی کشویی */
+.Navbar div .dropdown {
+  display: none;
+  /* منوی کشویی به طور پیش‌فرض مخفی است */
+  position: absolute;
+  top: 95px;
+  /* موقعیت نمایش منو در زیر گزینه */
+  right: 0;
+  background-color: #fff;
+  width: 95%;
+  height: 375px;
+  margin-right: 38px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* به منوی کشویی اولویت نمایش می‌دهیم */
+}
+
+.Navbar div:hover .dropdown {
+  display: block;
+  /* منوی کشویی هنگام هاور شدن نمایان می‌شود */
+}
+
+.Navbar div .dropdown a {
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+h4 {
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.Navbar div .dropdown p:hover {
+  color: rgb(167, 148, 188);
+}
+
+.Row {
+  width: 100%;
+  height: 950px;
+}
+
+.Row-Top {
+  display: flex;
+  padding-left: 38px;
+  width: 98%;
+  height: 450px;
+}
+
+.Row-Down {
+  display: flex;
+  padding-left: 38px;
+  width: 98%;
+  height: 450px;
+}
+
+.Row-Top div {
+  width: 22%;
+  height: 424px;
+  margin: 25px 16px;
+  border-radius: 16px;
+}
+
+.Row-Top div:hover {
+  cursor: pointer;
+}
+
+.Row-Down div {
+  width: 22%;
+  height: 424px;
+  margin: 25px 16px;
+  border-radius: 16px;
+}
+
+.Row-Down div:hover {
+  cursor: pointer;
+}
+
+.hi {
+  width: 93%;
+  margin-left: 49px;
+  border-radius: 16px;
+  background-color: rgb(167, 148, 188);
+  padding-top: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ecebe9;
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #6c757d;
+  display: none;
+}
+
+/* Footer */
+
+.Footer {
+  width: 100%;
+  height: 430px;
+}
+
+.Footer-Right {
+  width: 600px;
+  height: 300px;
+  float: right;
+  margin-right: 38px;
+  margin-top: 36px;
+}
+
+.Footer-Right-top {
+  width: 100%;
+  padding-left: 170px;
+}
+
+.Footer-Right-botton {
+  text-align: right;
+  font-size: 19px;
+  color: #7a7a7a;
+}
+
+.Footer-Left {
+  width: 492px;
+  height: 300px;
+  float: right;
+  margin-right: 50px;
+  margin-top: 110px;
+}
+
+.Footer-Left-Right-Top {
+  width: 492px;
+  margin-left: 322px;
+  direction: ltr;
+  color: black;
+}
+
+.Footer-Left-Right-Top-Top {
+  direction: rtl;
+  color: rgb(167, 148, 188);
+  font-size: 18px;
+  margin-right: 60px;
+}
+
+.Footer-Left-Right-Top-Botton {
+  width: 492px;
+  height: 155px;
+}
+
+.Footer-Left-Right-Top-Botton-Right {
+  float: right;
+  width: 24%;
+  height: 155px;
+  margin-top: 12px;
+  margin-right: 60px;
+}
+
+.Footer-Left-Right-Top-Botton-Left {
+  float: right;
+  width: 32%;
+  height: 155px;
+  margin-right: 60px;
+}
