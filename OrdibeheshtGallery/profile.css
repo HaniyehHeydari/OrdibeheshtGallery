@@ -8,9 +8,25 @@ body {
 
 .main {
   width: 100%;
-  height: 500px;
+  height: auto;
   display: flex;
   direction: rtl;
+}
+
+.content {
+  border-radius: 16px;
+ text-align: center;
+  font-size: 19px;
+}
+
+.profileForm{
+  width: 500px;
+  height: 300px;
+  box-shadow: 0px 0px 20px 10px #ecebe9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 200px;
+  margin-top: 50px;
 }
 
 .sidebar {
@@ -58,11 +74,3 @@ body {
   border-radius: 100%;
 }
 
-.content {
-  margin-right: 258px;
-  /* افزودن margin برای جایگاه sidebar */
-  padding: 20px;
-  flex-grow: 1;
-  overflow-y: auto;
-  /* اجازه اسکرول به محتوای داخلی */
-}

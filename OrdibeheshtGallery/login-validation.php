@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($password == $users['password']) {
                 $_SESSION["user"] = true;
                 $_SESSION['email'] = $email;
+                $_SESSION['user_id'] = $users['id'];
                 $_SESSION['fullname'] = $users['fullname'];
                 // تعیین نوع کاربر (عمومی یا ادمین)
                 if ($users['type'] == 0) {

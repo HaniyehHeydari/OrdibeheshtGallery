@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel="stylesheet" href="./MainPage.css" />
+    <link rel="stylesheet" href="./Main-Page.css" />
 </head>
 
 <body>
@@ -22,17 +22,17 @@
                             <img src="https://ibolak.com/assets/icons/search.svg" />
                         </div>
                     </div>
-                    <a class="User-Account" href="./register.php">
+                    <div class="User-Account">
                         <img src="https://ibolak.com/assets/icons/user.svg" style="margin-right: 30px; margin-left:10px " />
                         <?php
                         if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
                         ?>
-                            <span><?php echo $_SESSION['fullname']; ?></span>
+                            <a href="./profile.php"><?php echo $_SESSION['fullname']; ?></a>
                         <?php } else { ?>
-                            <p>ورود / ثبت نام</p>
+                            <a href="./register.php">ورود/ثبت نام</a>
                         <?php } ?>
-                    </a>
-                    <a class="Basket" href="#">
+                    </div>
+                    <a class="Basket" href="./cart.php">
                         <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 40px" />
                         <p>سبد خرید</p>
                         <p class="Zero">o</p>

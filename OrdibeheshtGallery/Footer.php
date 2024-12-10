@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Footer</title>
-  <link rel="stylesheet" href="./MainPage.css" />
+  <link rel="stylesheet" href="./Main-Page.css" />
 </head>
 
 <body>
