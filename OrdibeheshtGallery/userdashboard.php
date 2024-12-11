@@ -23,7 +23,16 @@
             <img src="./img/1.png" width="20px" height="20px" />
             <h3>صفحه نخست</h3>
         </a>
-        <a href="#">
+        <?php
+        // بررسی اینکه آیا کاربر ادمین است یا خیر
+        if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin') {
+        ?>
+            <a href="./admindashboard.php">
+                <img src="./img/1.png" width="20px" height="20px" />
+                <h3>پنل ادمین</h3>
+            </a>
+        <?php } ?>
+        <a href="./cart.php">
             <img src="./img/7.png" width="20px" height="20px" />
             <h3>سفارش ها</h3>
         </a>

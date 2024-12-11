@@ -42,6 +42,10 @@ $result = $conn->query($sql);
             <h4>افزودن محصول</h4>
             <img src="./img/2.jpg" width="30px" height="30px" />
         </a>
+        <a style="display: flex;  align-items: center; direction: ltr; column-gap: 10px; padding-left:35px" href="./ManageOrders.php">
+            <h4>مدیریت سفارشات</h4>
+            <img src="./img/7.png" width="20px" height="20px" />
+        </a>
         <a style="display: flex; align-items: center; direction: ltr; column-gap: 10px; padding-left:95px" href="./logout-validation.php">
             <h4>خروج</h4>
             <img src="./img/3.png" width="20px" height="20px" />
