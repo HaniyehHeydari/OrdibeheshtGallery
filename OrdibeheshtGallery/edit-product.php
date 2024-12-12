@@ -31,7 +31,6 @@ if (isset($_GET['id'])) {
 // بروزرسانی اطلاعات محصول
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $product_name = $_POST['product_name'];
-    $product_description = $_POST['product_description'];
     $product_material = $_POST['product_material'];
     $product_size = $_POST['product_size'];
     $product_color = $_POST['product_color'];
@@ -49,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $product_image = $row['productimage']; // اگر تصویر جدید آپلود نشد از تصویر قبلی استفاده کن
     }
 
-    $update_sql = "UPDATE products SET productname = '$product_name', productdescription = '$product_description', productmaterial = '$product_material', productsize = '$product_size' , productcolor = '$product_color' , productheight = '$product_height', productstock = '$product_stock', productprice = '$product_price',productimage = '$product_image' WHERE id = $product_id";
+    $update_sql = "UPDATE products SET productname = '$product_name', productmaterial = '$product_material', productsize = '$product_size' , productcolor = '$product_color' , productheight = '$product_height', productstock = '$product_stock', productprice = '$product_price',productimage = '$product_image' WHERE id = $product_id";
 
     if ($conn->query($update_sql) === TRUE) {
         echo "محصول با موفقیت ویرایش شد.";
@@ -76,10 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div id="name">
                 <label for="productname">نام محصول:</label>
                 <input type="text" id="product_name" name="product_name" value="<?php echo $row['productname']; ?>"><br>
-            </div>
-            <div id="description">
-                <label for="productdescription">توضیحات محصول:</label>
-                <textarea id="product_description" name="product_description"><?php echo $row['productdescription']; ?></textarea><br>
             </div>
             <div id="material">
                 <label for="productmaterial">جنس محصول:</label>

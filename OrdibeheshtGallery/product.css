@@ -1,14 +1,12 @@
-body {
+.main {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
-}
+    direction: rtl;
+  }
+  
 
-h1 {
-    text-align: center;
-    margin: 0;
-}
-
-main {
+.content {
     background-color: white;
     width: 500px;
     height: auto;
@@ -25,7 +23,6 @@ form {
 }
 
 #product_name,
-#product_description,
 #product_price,
 #product_material,
 #product_size,
@@ -42,7 +39,6 @@ form {
 }
 
 #product_name,
-#product_description,
 #product_price,
 #product_material,
 #product_size,
@@ -54,7 +50,6 @@ form {
 }
 
 #name,
-#description,
 #material,
 #size,
 #color,

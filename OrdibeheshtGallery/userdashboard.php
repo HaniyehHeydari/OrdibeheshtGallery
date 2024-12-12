@@ -27,12 +27,12 @@
         // بررسی اینکه آیا کاربر ادمین است یا خیر
         if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin') {
         ?>
-            <a href="./admindashboard.php">
+            <a href="./ProductList.php">
                 <img src="./img/9.png" width="20px" height="20px" />
                 <h3>پنل ادمین</h3>
             </a>
         <?php } ?>
-        <a href="./cart.php">
+        <a href="./order.php">
             <img src="./img/7.png" width="20px" height="20px" />
             <h3>سفارش ها</h3>
         </a>

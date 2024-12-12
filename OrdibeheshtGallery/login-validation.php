@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $_SESSION['user_type'] = 'admin';
                     // هدایت به داشبورد ادمین
-                    header("Location: admindashboard.php");
+                    header("Location: profile.php");
                 }
                 exit();
             } else {

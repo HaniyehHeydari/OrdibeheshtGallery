@@ -87,7 +87,6 @@ $result = $conn->query($sql);
             echo "<img src='uploads/" . $row['productimage'] . "' alt='" . $row['productname'] . "' class='product-image'>";
             echo "</a>";
             echo "<h3 class='product-name'>" . $row['productname'] . "</h3>";
-            echo "<p class='product-description'>" . $row['productdescription'] . "</p>";
             echo "<h2 class='product-price'>" . number_format($row['productprice']) . " تومان</h2>";
             echo "</div>";
           }

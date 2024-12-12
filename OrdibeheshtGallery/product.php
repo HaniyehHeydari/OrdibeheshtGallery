@@ -36,17 +36,6 @@ session_start();
                 }
                 ?>
             </div>
-            <div id="description">
-                <label for="productdescription">توضیحات تکمیلی</label><br />
-                <textarea id="product_description" name="product_description"><?php echo isset($_SESSION['old_data']['product_description']) ? $_SESSION['old_data']['product_description'] : ''; ?></textarea><br>
-                <?php
-                if (isset($_SESSION['errors']['product_description'])) {
-                    echo "<p style='color: red;     font-size: 12px;
-    margin-top: 5px;'>" . $_SESSION['errors']['product_description'] . "</p>";
-                    unset($_SESSION['errors']['product_description']);
-                }
-                ?>
-            </div>
             <div id="material">
                 <label for="productprice">جنس</label><br />
                 <input type="text" id="product_material" name="product_material" value="<?php echo isset($_SESSION['old_data']['product_material']) ? $_SESSION['old_data']['product_material'] : ''; ?>">

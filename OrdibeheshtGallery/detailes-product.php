@@ -39,7 +39,6 @@ $product = $result->fetch_assoc();
                     <p><?php echo $product['productsize']; ?></p>
                     <p><?php echo $product['productcolor']; ?></p>
                     <p><?php echo $product['productheight']; ?></p>
-                    <p><?php echo $product['productdescription']; ?></p>
                     <h2><?php echo number_format($product['productprice']); ?> تومان</h2>
 
                     <?php if ($product['productstock'] > 0): ?>

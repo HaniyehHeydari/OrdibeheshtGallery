@@ -1,36 +1,68 @@
-body {
-  font-family: Arial, sans-serif;
+.main {
+  width: 100%;
+  height: auto;
   display: flex;
-  margin: 0;
-  height: 100vh;
-  /* افزودن ارتفاع کامل به بدن */
-  overflow: hidden;
-  /* جلوگیری از اسکرول بدنه */
+  direction: rtl;
+}
+
+.dashboard{
+width: 20%;
+}
+
+.content {
+  width: 70%;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 19px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 .sidebar {
   width: 200px;
-  background-color: rgb(243, 237, 250);
+  height: 280;
+  border: 1px solid rgb(243, 237, 250);
+  border-radius: 16px;
   padding: 20px;
-  height: 100vh;
-  font-size: 18px;
-  position: fixed;
-  /* ثابت کردن sidebar */
-  top: 0;
-  right: 0;
+  margin: 20px;
+  font-size: 22px;
 }
 
-
-.content {
-  margin-right: 258px;
-  /* افزودن margin برای جایگاه sidebar */
-  padding: 20px;
-  flex-grow: 1;
-  overflow-y: auto;
-  /* اجازه اسکرول به محتوای داخلی */
-  height: 100vh;
-  /* تنظیم ارتفاع برای تطابق با بدن */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  align-items: left;
+  padding-right: 10px;
+  font-size: 15px;
 }
+
+.sidebar a:hover {
+  background-color: rgb(167, 148, 188);
+}
+
+.sidebar a:focus {
+  outline: none;
+}
+
+.user {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid rgb(243, 237, 250);
+  padding-bottom: 10px;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
 
 .sidebar a {
   display: block;
@@ -71,7 +103,7 @@ body {
 
 .product-table img {
   width: 200px;
-  height: 258px;
+  height: 200px;
   border-radius: 16px;
 }
 
