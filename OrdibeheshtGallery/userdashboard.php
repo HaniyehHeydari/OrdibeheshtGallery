@@ -28,7 +28,7 @@
         if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'admin') {
         ?>
             <a href="./admindashboard.php">
-                <img src="./img/1.png" width="20px" height="20px" />
+                <img src="./img/9.png" width="20px" height="20px" />
                 <h3>پنل ادمین</h3>
             </a>
         <?php } ?>
