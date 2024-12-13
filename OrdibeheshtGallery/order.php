@@ -50,51 +50,56 @@ $result = $stmt->get_result();
 </head>
 
 <body dir="rtl">
-    <?php include('Header.php'); ?>
+    <div class="header">
+        <?php include('Header.php'); ?>
+    </div>
 
-    <main class="main-content">
-        <section class="basket_table" >
-            <?php if ($result->num_rows > 0): ?>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>تصویر</th>
-                            <th>محصول</th>
-                            <th>قیمت</th>
-                            <th>تعداد</th>
-                            <th>جمع کل</th>
-                            <th>عملیات</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php while ($userP = $result->fetch_assoc()): ?>
+    <div class="main">
+        <?php include('userdashboard.php'); ?>
+
+        <main class="main-content">
+            <section class="basket_table">
+                <?php if ($result->num_rows > 0): ?>
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <td> <img style="border-radius: 16px;" width="150px" ; height="150px" ; src="uploads/<?php echo $userP['productimage']; ?>" alt="<?php echo htmlspecialchars($userP['productname']); ?>" class="product-details-imagee"></td>
-                                <td><?php echo htmlspecialchars($userP['productname']); ?></td>
-                                <td><?php echo number_format($userP['productprice']); ?> تومان</td>
-                                <td><?php echo $userP['quantity']; ?></td>
-                                <td><?php echo number_format($userP['productprice'] * $userP['quantity']); ?> تومان</td>
-                                <td>
-                                    <form action="./remove-from-cart.php" method="POST">
-                                        <input type="hidden" name="cart_id" value="<?php echo $userP['id']; ?>">
-                                        <button type="submit">
-                                            <img width="30px" height="30px" src="./img/4.jpg">
-                                            <a>حذف</a>
-                                        </button>
-                                    </form>
-                                </td>
+                                <th>تصویر</th>
+                                <th>محصول</th>
+                                <th>قیمت</th>
+                                <th>تعداد</th>
+                                <th>جمع کل</th>
+                                <th>عملیات</th>
                             </tr>
-                        <?php endwhile; ?>
-                    </tbody>
-                </table>
-            <?php else: ?>
-                <p>سبد خرید شما خالی است.</p>
-            <?php endif; ?>
-        </section>
-    </main>
-
+                        </thead>
+                        <tbody>
+                            <?php while ($userP = $result->fetch_assoc()): ?>
+                                <tr>
+                                    <td> <img style="border-radius: 16px;" width="150px" ; height="150px" ; src="uploads/<?php echo $userP['productimage']; ?>" alt="<?php echo htmlspecialchars($userP['productname']); ?>" class="product-details-imagee"></td>
+                                    <td><?php echo htmlspecialchars($userP['productname']); ?></td>
+                                    <td><?php echo number_format($userP['productprice']); ?> تومان</td>
+                                    <td><?php echo $userP['quantity']; ?></td>
+                                    <td><?php echo number_format($userP['productprice'] * $userP['quantity']); ?> تومان</td>
+                                    <td>
+                                        <form action="./remove-from-cart.php" method="POST">
+                                            <input type="hidden" name="cart_id" value="<?php echo $userP['id']; ?>">
+                                            <button type="submit">
+                                                <img width="30px" height="30px" src="./img/4.jpg">
+                                                <a>حذف</a>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                <?php else: ?>
+                    <p>سبد خرید شما خالی است.</p>
+                <?php endif; ?>
+            </section>
+        </main>
+    </div>
+    
     <?php include('Footer.php'); ?>
-
 </body>
 
 </html>
