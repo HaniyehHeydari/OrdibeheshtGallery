@@ -30,10 +30,10 @@ $result = $conn->query($sql);
   <main>
     <div class="carousel">
       <div class="carousel-slide active">
-        <img src="./img/Label-1.jpg">
+        <img src="./img/Label-1.jpg" width="99%">
       </div>
       <div class="carousel-slide">
-        <img src="./img/Label-2.jpg">
+        <img src="./img/Label-2.jpg" width="99%">
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
       <button class="next" onclick="moveSlide(1)">&#10095;</button>
