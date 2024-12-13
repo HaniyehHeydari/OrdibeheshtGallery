@@ -22,7 +22,7 @@ $result = $conn->query($sql);
   <title>ibolak</title>
 </head>
 
-<body>
+<body style=" overflow-x: hidden;">
 
   <?php include('Header.php') ?>
 

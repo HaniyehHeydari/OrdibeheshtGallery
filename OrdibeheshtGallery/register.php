@@ -6,16 +6,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>register</title>
-  <link rel="stylesheet" href="./registerr.css" />
+  <link rel="stylesheet" href="./register.css" />
 </head>
 
 <body dir="rtl">
 
+  <?php include('Header.php') ?>
 
   <div class="main">
     <form id="form-register" name="register" method="post">
       <div>
-        <img src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
+        <img class="image" src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
       </div>
 
       <div id="fullnames">
@@ -75,6 +76,9 @@
         قبلا ثبت نام کرده اید؟<a href="login.php" id="vorodhesab"> ورود به حساب</a>
       </p>
     </form>
+
+    <?php include('Footer.php') ?>
+
   </div>
 
 

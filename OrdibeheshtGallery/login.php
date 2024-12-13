@@ -5,17 +5,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./loginn.css" />
     <title>login</title>
 </head>
 
 <body dir="rtl">
-
+    <?php include('Header.php') ?>
     <div class="main">
         <form id="form-sign" name="login" method="POST">
 
             <div>
-                <img src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
+                <img class="image" src="../OrdibeheshtGallery/img/logo-1.png" style="width: 200px; height: 68px; margin-right: 130px" />
             </div>
             <div id="email">
                 <label for="emaill">ایمیل</label><br />
@@ -35,6 +35,7 @@
                 </p>
             </div>
         </form>
+        <?php include('Footer.php') ?>
     </div>
     <script src="/login.js"></script>
 
