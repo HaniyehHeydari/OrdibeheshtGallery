@@ -32,13 +32,9 @@
                 <h3>پنل ادمین</h3>
             </a>
         <?php } ?>
-        <a href="./order.php">
+        <a href="./my-orders.php">
             <img src="./img/7.png" width="20px" height="20px" />
             <h3>سفارش ها</h3>
-        </a>
-        <a href="#">
-            <img src="./img/8.png" width="20px" height="20px" />
-            <h3>علاقه مندی ها</h3>
         </a>
         <a href="./editpassword.php">
             <img src="./img/6.jpg" width="30px" height="25px" />

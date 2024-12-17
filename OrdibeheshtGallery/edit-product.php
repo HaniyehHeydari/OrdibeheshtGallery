@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>edit-product</title>
-    <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="./productt.css" />
 </head>
 
 <body dir="rtl">

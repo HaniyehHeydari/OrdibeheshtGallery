@@ -78,7 +78,7 @@ $conn->close();
     <link rel="stylesheet" href="./editepassword.css" />
 </head>
 
-<body dir="ltr">
+<body dir="ltr" style=" overflow-x: hidden;">
     <div class="header">
         <?php include('Header.php'); ?>
     </div>

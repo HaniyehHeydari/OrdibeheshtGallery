@@ -46,12 +46,10 @@ $product = $result->fetch_assoc();
                         <?php if (isset($_SESSION['user'])): ?>
                             <form action="add-to-cart.php" method="POST" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                                <div>
-                                    <button type="submit">
-                                        <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 33px;" /> افزودن به سبد خرید
-                                    </button>
-                                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
-                                </div>
+                                <button type="submit">
+                                    <img src="https://ibolak.com/assets/icons/basket.svg" /> افزودن به سبد خرید
+                                </button>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
                             </form>
 
                         <?php else: ?>

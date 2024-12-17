@@ -35,7 +35,6 @@
                     <a class="Basket" href="./cart.php">
                         <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 40px" />
                         <p>سبد خرید</p>
-                        <p class="Zero">o</p>
                     </a>
                 </div>
             </div>

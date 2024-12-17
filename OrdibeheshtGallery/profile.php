@@ -39,7 +39,7 @@ if (!$userData) {
     <title>profile</title>
 </head>
 
-<body dir="ltr">
+<body dir="ltr" style=" overflow-x: hidden;">
     <div class="header">
         <?php include('Header.php') ?>
     </div>

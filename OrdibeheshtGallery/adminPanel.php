@@ -16,6 +16,10 @@
             <img src="./img/2.jpg" width="30px" height="30px" />
             <h3>افزودن محصول</h3>
         </a>
+        <a style="display: flex;  align-items: center; column-gap: 10px; direction: rtl;" href="./UsersList.php">
+            <img src="./img/7.png" width="20px" height="20px" />
+            <h3>لیست کاربران</h3>
+        </a>
         <a style="display: flex;  align-items: center; column-gap: 10px; direction: rtl;" href="./ProductList.php">
             <img src="./img/7.png" width="20px" height="20px" />
             <h3>لیست محصولات</h3>

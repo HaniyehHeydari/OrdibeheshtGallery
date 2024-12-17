@@ -97,7 +97,9 @@ $result = $stmt->get_result();
             <p>مجموع سفارشات: <strong><?php echo number_format($totalAmount); ?> تومان</strong></p>
             <p>هزینه ارسال: <strong>49000 تومان</strong></p>
             <p><strong>مبلغ قابل پرداخت: <?php echo number_format($totalAmount + 49000); ?> تومان</strong></p>
-            <button>ادامه فرایند خرید</button>
+            <form action="finalize-order.php" method="POST">
+                <button type="submit">ادامه فرایند خرید</button>
+            </form>
         </aside>
     </main>
 
