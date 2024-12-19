@@ -94,12 +94,16 @@ $result = $stmt->get_result();
 
         <aside class="invoice">
             <h3>فاکتور خرید</h3>
-            <p>مجموع سفارشات: <strong><?php echo number_format($totalAmount); ?> تومان</strong></p>
-            <p>هزینه ارسال: <strong>49000 تومان</strong></p>
-            <p><strong>مبلغ قابل پرداخت: <?php echo number_format($totalAmount + 49000); ?> تومان</strong></p>
-            <form action="finalize-order.php" method="POST">
-                <button type="submit">ادامه فرایند خرید</button>
-            </form>
+            <?php if ($result->num_rows > 0): ?>
+                <p>مجموع سفارشات: <strong><?php echo number_format($totalAmount); ?> تومان</strong></p>
+                <p>هزینه ارسال: <strong>49000 تومان</strong></p>
+                <p><strong>مبلغ قابل پرداخت: <?php echo number_format($totalAmount + 49000); ?> تومان</strong></p>
+                <form action="./checkout.php" method="POST">
+                    <button type="submit">ادامه فرایند خرید</button>
+                </form>
+            <?php else: ?>
+                <p>هیچ سفارشی برای پرداخت وجود ندارد.</p>
+            <?php endif; ?>
         </aside>
     </main>
 

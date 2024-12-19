@@ -4,24 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="./UsersList.css" />
     <title>User List</title>
 </head>
 
 <body dir="ltr" style="overflow-x: hidden;">
     <div class="header">
         <?php include('Header.php') ?>
-        <h1>User List</h1>
     </div>
 
     <div class="main">
         <div class="dashboard">
             <?php include('adminPanel.php') ?>
-            <p>Admin Dashboard</p>
         </div>
 
         <div class="content">
-            <h2>Users</h2>
             <?php
             // اتصال به دیتابیس
             $conn = new mysqli("localhost", "root", "", "ibolak");

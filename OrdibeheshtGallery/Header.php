@@ -17,13 +17,13 @@
                 </a>
                 <div class="Container-One-Left">
                     <div class="Search">
-                        <input class="Search_Key" type="text" maxlength="100" placeholder="جستجو " />
+                        <input class="Search_Key" type="text" maxlength="100" placeholder="جستجو " style="font-size: 20px;" />
                         <div class="Search-Img">
                             <img src="https://ibolak.com/assets/icons/search.svg" />
                         </div>
                     </div>
                     <div class="User-Account">
-                        <img src="https://ibolak.com/assets/icons/user.svg" style="margin-right: 30px; margin-left:10px " />
+                        <img src="https://ibolak.com/assets/icons/user.svg" style="margin-right: 40px; margin-left:10px " />
                         <?php
                         if (isset($_SESSION['user']) && $_SESSION['user'] === true) {
                         ?>
@@ -33,7 +33,7 @@
                         <?php } ?>
                     </div>
                     <a class="Basket" href="./cart.php">
-                        <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 40px" />
+                        <img src="https://ibolak.com/assets/icons/basket.svg" style="margin-right: 58px" />
                         <p>سبد خرید</p>
                     </a>
                 </div>

@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($conn->query($update_sql) === TRUE) {
         echo "محصول با موفقیت ویرایش شد.";
-        header("Location: admindashboard.php");
+        header("Location: ProductList.php");
     } else {
         echo "خطا در ویرایش محصول: " . $conn->error;
     }
@@ -64,44 +64,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <title>edit-product</title>
+    <title>ویرایش محصول</title>
     <link rel="stylesheet" href="./productt.css" />
 </head>
 
 <body dir="rtl">
     <main>
-        <h1>ویرایش محصول</h1>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="edit-product.php?id=<?php echo $product_id; ?>" method="POST" enctype="multipart/form-data">
             <div id="name">
-                <label for="productname">نام محصول:</label>
+                <label for="productname">نام محصول</label>
                 <input type="text" id="product_name" name="product_name" value="<?php echo $row['productname']; ?>"><br>
             </div>
             <div id="material">
-                <label for="productmaterial">جنس محصول:</label>
+                <label for="productmaterial">جنس محصول</label>
                 <input type="text" id="product_material" name="product_material" value="<?php echo $row['productmaterial']; ?>"><br>
             </div>
-            <div id="size">
-                <label for="productsize">سایز محصول:</label>
-                <input id="product_size" name="product_size" value="<?php echo $row['productsize']; ?>"><br>
-            </div>
             <div id="color">
-                <label for="productcolor">رنگ محصول:</label>
+                <label for="productcolor">رنگ محصول</label>
                 <input type="text" id="product_color" name="product_color" value="<?php echo $row['productcolor']; ?>"><br>
             </div>
+            <div id="size">
+                <label for="productsize">سایز محصول</label>
+                <input id="product_size" name="product_size" value="<?php echo $row['productsize']; ?>"><br>
+            </div>
             <div id="height">
-                <label for="productheight">قد محصول:</label>
+                <label for="productheight">قد محصول</label>
                 <input type="text" id="product_height" name="product_height" value="<?php echo $row['productheight']; ?>"><br>
             </div>
             <div id="stock">
-                <label for="productprice">تعداد محصول:</label><br />
+                <label for="productprice">تعداد</label><br />
                 <input type="text" id="product_stock" name="product_stock" value="<?php echo $row['productstock']; ?>">
             </div>
             <div id="price">
-                <label for="productprice">قیمت محصول:</label>
+                <label for="productprice">قیمت کل</label>
                 <input type="text" id="product_price" name="product_price" value="<?php echo $row['productprice']; ?>"><br>
             </div>
             <div id="image">
-                <label for="productimage">تصویر محصول:</label>
+                <label for="productimage">تصویر</label>
                 <input type="file" id="product_image" name="product_image"><br>
             </div>
             <button type="submit">ثبت تغییرات</button>

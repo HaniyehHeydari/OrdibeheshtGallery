@@ -1,4 +1,4 @@
-.main-content {
+.main {
     width: 100%;
     height: auto;
     display: flex;
@@ -13,7 +13,7 @@ h1 {
     color: #333;
 }
 
-.orders-table {
+.content {
     border-radius: 16px;
     width: 70%;
     margin: 0 auto;
@@ -62,4 +62,31 @@ h1 {
 p {
     font-size: 18px;
     color: gray;
+}
+
+button {
+    background-color: rgb(167, 148, 188);
+    border: 1px solid rgb(167, 148, 188);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+select {
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+form {
+    display: flex;
+    column-gap: 10px;
 }

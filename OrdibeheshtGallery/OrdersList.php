@@ -8,6 +8,18 @@ if ($conn->connect_error) {
 }
 $conn->query("SET NAMES utf8");
 
+// بروزرسانی وضعیت سفارش
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['order_id']) && isset($_POST['status'])) {
+    $order_id = $_POST['order_id'];
+    $status = $_POST['status'];
+
+    $sql_update = "UPDATE final_orders SET status = ? WHERE id = ?";
+    $stmt_update = $conn->prepare($sql_update);
+    $stmt_update->bind_param("si", $status, $order_id);
+    $stmt_update->execute();
+    $stmt_update->close();
+}
+
 // دریافت اطلاعات سفارشات
 $sql = "
     SELECT 
@@ -17,7 +29,8 @@ $sql = "
         products.productimage AS product_image,
         final_orders.quantity AS quantity,
         final_orders.total_price AS total_price,
-        final_orders.order_date AS order_date
+        final_orders.order_date AS order_date,
+        final_orders.status AS order_status
     FROM 
         final_orders
     JOIN 
@@ -36,32 +49,10 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./OrdersListt.css">
     <title>لیست سفارشات</title>
     <style>
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            border-radius: 16px;
-            box-shadow: 0px 0px 20px 10px #ecebe9;
-        }
-        
-        th,
-        td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid rgb(243, 237, 250);
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .image {
-            border-radius: 8px;
-            margin: 10px;
-        }
+        /* Styles remain unchanged */
     </style>
 </head>
 
@@ -76,17 +67,18 @@ $result = $conn->query($sql);
         </div>
 
         <div class="content">
-            <h1>لیست سفارشات</h1>
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
-                        <th>تصویر محصول</th>
+                        <th>تصویر </th>
                         <th>نام کاربر</th>
-                        <th>نام محصول</th>
+                        <th>نام سفارش</th>
                         <th>شناسه سفارش</th>
                         <th>تعداد</th>
                         <th>قیمت کل</th>
                         <th>تاریخ سفارش</th>
+                        <th>وضعیت</th>
+                        <th>عملیات</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,19 +86,31 @@ $result = $conn->query($sql);
                         <?php while ($row = $result->fetch_assoc()): ?>
                             <tr>
                                 <td>
-                                    <img class="image" src="uploads/<?php echo htmlspecialchars($row['product_image']); ?>" alt="تصویر محصول" width="100" height="100">
+                                    <img style="width: 150px; height: 185px; border-radius: 16px;" class="image" src="uploads/<?php echo htmlspecialchars($row['product_image']); ?>" alt="تصویر محصول" width="100" height="100">
                                 </td>
                                 <td><?php echo htmlspecialchars($row['user_name']); ?></td>
                                 <td><?php echo htmlspecialchars($row['product_name']); ?></td>
                                 <td><?php echo htmlspecialchars($row['order_id']); ?></td>
                                 <td><?php echo htmlspecialchars($row['quantity']); ?></td>
-                                <td><?php echo number_format($row['total_price']); ?> تومان</td>
+                                <td style="color: red;"><?php echo number_format($row['total_price']); ?> تومان</td>
                                 <td><?php echo htmlspecialchars($row['order_date']); ?></td>
+                                <td style="color: green;"><?php echo htmlspecialchars($row['order_status']); ?></td>
+                                <td>
+                                    <form method="post" action="">
+                                        <input type="hidden" name="order_id" value="<?php echo $row['order_id']; ?>">
+                                        <select name="status">
+                                            <option value="در حال پردازش" <?php if ($row['order_status'] == 'در حال پردازش') echo 'selected'; ?>>در حال پردازش</option>
+                                            <option value="در حال ارسال" <?php if ($row['order_status'] == 'در حال ارسال') echo 'selected'; ?>>در حال ارسال</option>
+                                            <option value="عدم ارسال" <?php if ($row['order_status'] == 'عدم ارسال') echo 'selected'; ?>>عدم ارسال</option>
+                                        </select>
+                                        <button type="submit">به‌روزرسانی</button>
+                                    </form>
+                                </td>
                             </tr>
                         <?php endwhile; ?>
                     <?php else: ?>
                         <tr>
-                            <td colspan="7">هیچ سفارشی یافت نشد.</td>
+                            <td colspan="9">هیچ سفارشی یافت نشد.</td>
                         </tr>
                     <?php endif; ?>
                 </tbody>

@@ -35,7 +35,7 @@ session_start();
 
             <form action="product-validation.php" method="post" enctype="multipart/form-data">
                 <div id="name">
-                    <label for="productname">نام</label><br />
+                    <label for="productname">نام محصول</label><br />
                     <input type="text" id="product_name" name="product_name" value="<?php echo isset($_SESSION['old_data']['product_name']) ? $_SESSION['old_data']['product_name'] : ''; ?>">
                     <?php
                     if (isset($_SESSION['errors']['product_name'])) {
@@ -46,7 +46,7 @@ session_start();
                     ?>
                 </div>
                 <div id="material">
-                    <label for="productprice">جنس</label><br />
+                    <label for="productprice">جنس محصول</label><br />
                     <input type="text" id="product_material" name="product_material" value="<?php echo isset($_SESSION['old_data']['product_material']) ? $_SESSION['old_data']['product_material'] : ''; ?>">
                     <?php
                     if (isset($_SESSION['errors']['product_material'])) {
@@ -56,19 +56,8 @@ session_start();
                     }
                     ?>
                 </div>
-                <div id="size">
-                    <label for="productprice">سایز</label><br />
-                    <input type="text" id="product_size" name="product_size" value="<?php echo isset($_SESSION['old_data']['product_size']) ? $_SESSION['old_data']['product_size'] : ''; ?>">
-                    <?php
-                    if (isset($_SESSION['errors']['product_size'])) {
-                        echo "<p style='color: red;     font-size: 12px;
-    margin-top: 5px;'>" . $_SESSION['errors']['product_size'] . "</p>";
-                        unset($_SESSION['errors']['product_size']);
-                    }
-                    ?>
-                </div>
                 <div id="color">
-                    <label for="productprice">رنگ</label><br />
+                    <label for="productprice">رنگ محصول</label><br />
                     <input type="text" id="product_color" name="product_color" value="<?php echo isset($_SESSION['old_data']['product_color']) ? $_SESSION['old_data']['product_color'] : ''; ?>">
                     <?php
                     if (isset($_SESSION['errors']['product_color'])) {
@@ -78,8 +67,19 @@ session_start();
                     }
                     ?>
                 </div>
+                <div id="size">
+                    <label for="productprice">سایز محصول</label><br />
+                    <input type="text" id="product_size" name="product_size" value="<?php echo isset($_SESSION['old_data']['product_size']) ? $_SESSION['old_data']['product_size'] : ''; ?>">
+                    <?php
+                    if (isset($_SESSION['errors']['product_size'])) {
+                        echo "<p style='color: red;     font-size: 12px;
+    margin-top: 5px;'>" . $_SESSION['errors']['product_size'] . "</p>";
+                        unset($_SESSION['errors']['product_size']);
+                    }
+                    ?>
+                </div>
                 <div id="height">
-                    <label for="productprice">قد</label><br />
+                    <label for="productprice">قد محصول</label><br />
                     <input type="text" id="product_height" name="product_height" value="<?php echo isset($_SESSION['old_data']['product_height']) ? $_SESSION['old_data']['product_height'] : ''; ?>">
                     <?php
                     if (isset($_SESSION['errors']['product_height'])) {
@@ -101,7 +101,7 @@ session_start();
                     ?>
                 </div>
                 <div id="price">
-                    <label for="productprice">قیمت</label><br />
+                    <label for="productprice">قیمت کل</label><br />
                     <input type="text" id="product_price" name="product_price">
                     <?php
                     if (isset($_SESSION['errors']['product_price'])) {

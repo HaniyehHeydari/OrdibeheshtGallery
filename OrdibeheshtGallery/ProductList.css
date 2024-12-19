@@ -1,4 +1,4 @@
-.main-content {
+.main {
     width: 100%;
     height: auto;
     display: flex;
@@ -13,7 +13,7 @@ h1 {
     color: #333;
 }
 
-.orders-table {
+.content {
     border-radius: 16px;
     width: 70%;
     margin: 0 auto;
@@ -27,26 +27,26 @@ h1 {
     margin-top: 20px;
 }
 
-.table {
+.product-table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 16px;
     box-shadow: 0px 0px 20px 10px #ecebe9;
 }
 
-.table thead {
+.product-table thead {
     background-color: #A794BC;
     color: white;
 }
 
-.table th,
-.table td {
+.product-table th,
+.product-table td {
     color: black;
     padding: 10px;
     text-align: center;
 }
 
-.table td:hover {
+.product-table td:hover {
     cursor: pointer;
 }
 
@@ -54,12 +54,12 @@ h1 {
     border: 1px solid #ddd;
 }
 
-.table tr:hover {
+.product-table tr:hover {
     background-color: #f1f1f1;
     cursor: pointer;
 }
 
 p {
     font-size: 18px;
-    color: gray;
+    color: black;
 }

@@ -15,11 +15,11 @@ body {
 
 .content {
   border-radius: 16px;
- text-align: center;
+  text-align: center;
   font-size: 19px;
 }
 
-.profileForm{
+.profileForm {
   width: 500px;
   height: 300px;
   box-shadow: 0px 0px 20px 10px #ecebe9;
@@ -73,4 +73,3 @@ body {
   height: 60px;
   border-radius: 100%;
 }
-

@@ -5,8 +5,8 @@
   direction: rtl;
 }
 
-.dashboard{
-width: 20%;
+.dashboard {
+  width: 20%;
 }
 
 .content {
@@ -102,8 +102,8 @@ width: 20%;
 }
 
 .product-table img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 185px;
   border-radius: 16px;
 }
 
@@ -143,16 +143,16 @@ width: 20%;
 
 .product-price {
   color: red;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   direction: rtl;
 }
 
 .product-description {
-  font-size: 16px;
+  font-size: 18px;
   color: #6c757d;
 }
 
-.h{
+.h {
   width: 700px;
 }

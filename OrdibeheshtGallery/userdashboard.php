@@ -34,10 +34,10 @@
         <?php } ?>
         <a href="./my-orders.php">
             <img src="./img/7.png" width="20px" height="20px" />
-            <h3>سفارش ها</h3>
+            <h3>لیست سفارشات</h3>
         </a>
         <a href="./editpassword.php">
-            <img src="./img/6.jpg" width="30px" height="25px" />
+            <img src="./img/6.jpg" width="28px" height="26px" />
             <h3>تغییر رمز عبور</h3>
         </a>
         <a href="./logout-validation.php">
