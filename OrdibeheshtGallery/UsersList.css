@@ -64,3 +64,12 @@ p {
   font-size: 18px;
   color: gray;
 }
+
+.delete-button {
+  color: red;
+  text-decoration: none;
+}
+
+.delete-button:hover {
+  text-decoration: underline;
+}

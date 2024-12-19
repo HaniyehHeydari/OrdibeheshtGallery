@@ -31,13 +31,24 @@ session_start();
             }
             $conn->query("SET NAMES utf8");
 
+            // بررسی اگر درخواست حذف ارسال شده است
+            if (isset($_GET['delete_id'])) {
+                $delete_id = intval($_GET['delete_id']);
+                $delete_sql = "DELETE FROM users WHERE id = $delete_id";
+                if ($conn->query($delete_sql) === TRUE) {
+                    echo "<p style='color: green;'>کاربر با موفقیت حذف شد.</p>";
+                } else {
+                    echo "<p style='color: red;'>خطا در حذف کاربر: " . $conn->error . "</p>";
+                }
+            }
+
             // کوئری برای گرفتن لیست کاربران به جز ادمین
-            $sql = "SELECT fullname, email, password, addres FROM users WHERE type != '1'"; // اضافه کردن پسورد و آدرس
+            $sql = "SELECT id, fullname, email, password, addres FROM users WHERE type != '1'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 echo "<table class='user-list'>";
-                echo "<thead><tr><th>نام و نام خانوادگی</th><th>ایمیل</th><th>رمز عبور</th><th>آدرس</th></tr></thead>";
+                echo "<thead><tr><th>نام و نام خانوادگی</th><th>ایمیل</th><th>رمز عبور</th><th>آدرس</th><th>عملیات</th></tr></thead>";
                 echo "<tbody>";
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
@@ -45,6 +56,7 @@ session_start();
                     echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["password"]) . "</td>";
                     echo "<td>" . htmlspecialchars($row["addres"]) . "</td>";
+                    echo "<td><a href='?delete_id=" . $row['id'] . "' class='delete-button'>حذف</a></td>";
                     echo "</tr>";
                 }
                 echo "</tbody>";
