@@ -27,55 +27,49 @@ $user_id = $_SESSION['user_id'];
 
 <body dir="rtl">
     <?php include('Header.php'); ?>
-    <main class="main-content">
-        <section class="checkout-form">
-            <h2>جزئیات پرداخت</h2>
-            <form action="finalize-order.php" method="POST">
-                <?php if (isset($_SESSION['success'])): ?>
-                    <p style="color: green;"><?php echo $_SESSION['success'];
-                                                unset($_SESSION['success']); ?></p>
-                <?php endif; ?>
-                <?php if (isset($_SESSION['error'])): ?>
-                    <p style="color: red;"><?php echo $_SESSION['error'];
-                                            unset($_SESSION['error']); ?></p>
-                <?php endif; ?>
+    <div class="main">
 
-                <label for="firstname">نام *</label>
-                <input type="text" id="firstname" name="firstname" required>
+        <form action="finalize-order.php" method="POST" class="form">
 
-                <label for="lastname">نام خانوادگی *</label>
-                <input type="text" id="lastname" name="lastname" required>
+            <div class="fulname">
+                <div class="firstname">
+                    <label for="firstname">نام</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
 
-                <label for="companyname">نام شرکت (اختیاری)</label>
-                <input type="text" id="companyname" name="companyname">
+                <div class="lastname">
+                    <label for="lastname">نام خانوادگی</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+            </div>
+            <div class="mobile">
+                <label for="mobile">شماره تماس</label>
+                <input type="number" id="mobile" name="mobile">
+            </div>
 
-                <label for="country">کشور / منطقه *</label>
-                <input type="text" id="country" name="country" value="ایران" required>
+            <div class="province">
+                <label for="province">استان</label>
+                <input type="text" id="province" name="province" required>
+            </div>
 
-                <label for="address">آدرس خیابان *</label>
-                <input type="text" id="address" name="address" required>
-
-                <label for="apartment">آپارتمان، مجتمع واحد و... (اختیاری)</label>
-                <input type="text" id="apartment" name="apartment">
-
-                <label for="city">شهر *</label>
+            <div class="city">
+                <label for="city">شهر</label>
                 <input type="text" id="city" name="city" required>
+            </div>
 
-                <label for="state">استان *</label>
-                <select id="state" name="state" required>
-                    <option value="">انتخاب کنید</option>
-                    <option value="تهران">تهران</option>
-                    <option value="اصفهان">اصفهان</option>
-                    <!-- استان‌های دیگر -->
-                </select>
+            <div class="address">
+                <label for="address"> آدرس کامل </label>
+                <input type="text" id="address" name="address" required>
+            </div>
 
+            <div class="postcode">
                 <label for="postcode">کد پستی (اختیاری)</label>
                 <input type="text" id="postcode" name="postcode">
+            </div>
 
-                <button type="submit">پرداخت و ثبت نهایی سفارش</button>
-            </form>
-        </section>
-    </main>
+            <button type="submit" class="open">پرداخت و ثبت نهایی سفارش</button>
+        </form>
+    </div>
     <?php include('Footer.php'); ?>
 </body>
 

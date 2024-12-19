@@ -13,7 +13,7 @@
   font-size: 17px;
 }
 
-button{
+button {
   display: flex;
   background-color: rgb(167, 148, 188);
   border: 1px solid rgb(167, 148, 188);
@@ -46,7 +46,7 @@ button{
   font-size: 18px;
   margin: 20px;
 }
-.invoice button{
+.invoice button {
   margin-right: 78px;
 }
 

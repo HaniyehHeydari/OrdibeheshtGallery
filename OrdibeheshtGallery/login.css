@@ -24,19 +24,16 @@
 }
 
 #email,
-#phone,
 #password {
   margin-top: 30px;
 }
 
 #pass,
-#emailuser,
-#phoneNumbers {
+#emailuser {
   margin-top: 10px;
 }
 
 #emailuser,
-#phoneNumbers,
 #pass input {
   border: 1px solid rgb(243, 237, 250);
   border-radius: 20px;
