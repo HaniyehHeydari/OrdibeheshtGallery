@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +37,7 @@
 
             if ($result->num_rows > 0) {
                 echo "<table class='user-list'>";
-                echo "<thead><tr><th>Fullname</th><th>Email</th><th>Password</th><th>Address</th></tr></thead>";
+                echo "<thead><tr><th>نام و نام خانوادگی</th><th>ایمیل</th><th>رمز عبور</th><th>آدرس</th></tr></thead>";
                 echo "<tbody>";
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";

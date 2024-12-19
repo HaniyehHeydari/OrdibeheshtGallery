@@ -39,6 +39,7 @@ $result = $conn->query($sql);
     </div>
 
     <div class="main">
+
         <div class="dashboard">
             <?php include('adminPanel.php') ?>
         </div>
@@ -72,11 +73,11 @@ $result = $conn->query($sql);
                         echo "<td><h2 class='product-price'>" . number_format($row['productprice']) . " تومان </h2></td>";
                         echo "<td>
                         <div>
-                        <div class='n'>
-                            <a href='edit-product.php?id=" . $row['id'] . "' class='btn-edit'>ویرایش</a>
+                        <div class='btn'>
+                            <a href='edit-product.php?id=" . $row['id'] . "' >ویرایش</a>
                         </div>
-                        <div>
-                            <a href='delete-product.php?id=" . $row['id'] . "' class='btn-delete' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>
+                        <div class='btn'>
+                            <a href='delete-product.php?id=" . $row['id'] . "' onclick='return confirm(\"آیا مطمئنید؟\")'>حذف</a>
                         </div>
                         </div>
                             </td>";

@@ -45,9 +45,9 @@ $result = $stmt->get_result();
 <body dir="rtl">
     <?php include('Header.php'); ?>
 
-    <main class="main-content">
+    <div class="main">
         <?php include('userdashboard.php') ?>
-        <section class="orders-table">
+        <div class="content">
             <?php if ($result->num_rows > 0): ?>
                 <table class="table">
                     <thead>
@@ -81,8 +81,8 @@ $result = $stmt->get_result();
             <?php else: ?>
                 <p>شما تاکنون سفارشی ثبت نکرده‌اید.</p>
             <?php endif; ?>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <?php include('Footer.php'); ?>
 </body>

@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body dir="rtl">
-    <main>
+    <main style="margin-right: 300px; margin-top: 50px;">
         <form action="edit-product.php?id=<?php echo $product_id; ?>" method="POST" enctype="multipart/form-data">
             <div id="name">
                 <label for="productname">نام محصول</label>

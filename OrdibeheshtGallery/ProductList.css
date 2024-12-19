@@ -1,65 +1,111 @@
 .main {
-    width: 100%;
-    height: auto;
-    display: flex;
-    direction: rtl;
-    padding: 20px;
-    text-align: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  direction: rtl;
+  text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
 }
 
 .content {
-    border-radius: 16px;
-    width: 70%;
-    margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    text-align: center;
-    font-size: 19px;
-    margin-right: 50px;
-    margin-top: 20px;
+  border-radius: 16px;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  font-size: 19px;
+  margin-right: 50px;
+  margin-top: 20px;
 }
 
 .product-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 16px;
-    box-shadow: 0px 0px 20px 10px #ecebe9;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 10px #ecebe9;
 }
 
 .product-table thead {
-    background-color: #A794BC;
-    color: white;
+  background-color: #a794bc;
+  color: white;
 }
 
 .product-table th,
 .product-table td {
-    color: black;
-    padding: 10px;
-    text-align: center;
+  color: black;
+  padding: 10px;
+  text-align: center;
 }
 
 .product-table td:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .table tr {
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 .product-table tr:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
+  background-color: #f1f1f1;
+  cursor: pointer;
 }
 
 p {
-    font-size: 18px;
-    color: black;
+  font-size: 18px;
+  color: black;
 }
+
+.product-table img {
+  width: 150px;
+  height: 185px;
+  border-radius: 16px;
+}
+
+.btn-edit,
+.btn-delete {
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn{
+    background-color: rgb(167, 148, 188);
+    border: 1px solid rgb(167, 148, 188);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-price {
+  color: red;
+  font-size: 18px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+.product-description {
+  font-size: 18px;
+  color: #6c757d;
+}
+

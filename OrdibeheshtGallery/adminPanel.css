@@ -1,0 +1,30 @@
+.sidebar {
+  width: 200px;
+  height: 280;
+  border: 1px solid rgb(243, 237, 250);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px;
+  font-size: 22px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  align-items: left;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.sidebar a:hover {
+  background-color: rgb(167, 148, 188);
+}
+
+.sidebar a:focus {
+  outline: none;
+}

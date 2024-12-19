@@ -22,7 +22,7 @@ session_start();
             <?php include('adminPanel.php') ?>
         </div>
 
-        <main>
+        <div class="content">
 
             <!-- نمایش پیغام‌های عمومی -->
             <?php
@@ -124,7 +124,7 @@ session_start();
                 </div>
                 <button type="submit" name="submit">ثبت کالا</button>
             </form>
-        </main>
+        </div>
 
     </div>
 
