@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user_type'] != 'admin') {
 }
 
 $errors = [];
-$productName = $productMaterial = $productSize = $productColor = $productHeight = $productStock =  $productPrice = $productImage = '';
+$productName = $productMaterial = $productSize = $productColor = $productHeight = $productStock = $productPrice = $productImage = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productName = trim($_POST['product_name']);
@@ -50,8 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['product_height'] = "لطفا قد محصول را وارد کنید";
     }
 
-     // اعتبارسنجی موجودی محصول
-     if (empty($productStock)) {
+    // اعتبارسنجی موجودی محصول
+    if (empty($productStock)) {
         $errors['product_stock'] = "لطفا تعداد محصول را وارد کنید";
     }
 
@@ -75,14 +75,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // اگر هیچ خطایی وجود نداشت، محصول را در دیتابیس ثبت کن
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO products (productname, productmaterial, productsize, productcolor, productheight, productprice, productimage) VALUES (?, ?, ?, ? , ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO products (productname, productmaterial, productsize, productcolor, productheight, productstock, productprice, productimage) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         if ($stmt === false) {
             $_SESSION['message'] = "خطا در آماده‌سازی کوئری: " . $conn->error;
             header("Location: product.php");
             exit();
         }
 
-        $stmt->bind_param("ssds", $productName, $productMaterial, $productSize, $productColor, $productHeight , $productPrice, $productImage);
+        $stmt->bind_param("sssssiis", $productName, $productMaterial, $productSize, $productColor, $productHeight, $productStock, $productPrice, $productImage);
 
         if ($stmt->execute()) {
             $_SESSION['message'] = "محصول با موفقیت ثبت شد.";
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $stmt->close();
-        header("Location: admindashboard.php");
+        header("Location: ProductList.php");
         exit();
     } else {
         $_SESSION['errors'] = $errors;

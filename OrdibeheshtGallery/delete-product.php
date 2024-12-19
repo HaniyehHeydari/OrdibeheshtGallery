@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
         if ($conn->query($delete_sql) === TRUE) {
             // در صورت حذف موفقیت‌آمیز، به صفحه مدیریت محصولات برمی‌گردیم
             echo "محصول با موفقیت حذف شد.";
-            header("Location: admindashboard.php");
+            header("Location: ProductList.php");
         } else {
             echo "خطا در حذف محصول: " . $conn->error;
         }

@@ -24,15 +24,6 @@ session_start();
 
         <div class="content">
 
-            <!-- نمایش پیغام‌های عمومی -->
-            <?php
-            if (isset($_SESSION['message'])) {
-                echo "<p style='color: red;     font-size: 12px;
-    margin-top: 5px;'>" . $_SESSION['message'] . "</p>";
-                unset($_SESSION['message']);
-            }
-            ?>
-
             <form action="product-validation.php" method="post" enctype="multipart/form-data">
                 <div id="name">
                     <label for="productname">نام محصول</label><br />
