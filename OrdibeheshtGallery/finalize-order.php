@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 
     $_SESSION['success'] = "سفارش شما با موفقیت ثبت شد!";
-    header("Location: order-confirmation.php"); // اطمینان حاصل کنید که این فایل وجود دارد
+    header("Location: order-confirmation.php");
     exit();
 } else {
     $_SESSION['error'] = "درخواست نامعتبر.";
