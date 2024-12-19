@@ -98,7 +98,7 @@ $result = $stmt->get_result();
             </section>
         </main>
     </div>
-    
+
     <?php include('Footer.php'); ?>
 </body>
 
