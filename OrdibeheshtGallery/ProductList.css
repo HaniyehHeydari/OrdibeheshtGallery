@@ -78,13 +78,13 @@ p {
   cursor: pointer;
 }
 
-.btn{
-    background-color: rgb(167, 148, 188);
-    border: 1px solid rgb(167, 148, 188);
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 20px;
-    margin-bottom: 15px;
+.btn {
+  background-color: rgb(167, 148, 188);
+  border: 1px solid rgb(167, 148, 188);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .btn a {
@@ -108,4 +108,3 @@ p {
   font-size: 18px;
   color: #6c757d;
 }
-

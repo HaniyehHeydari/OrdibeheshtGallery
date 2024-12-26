@@ -63,37 +63,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: checkout.php");
     exit();
 }
-?>
-
-<!DOCTYPE html>
-<html lang="fa">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تأیید سفارش</title>
-    <link rel="stylesheet" href="./carts.css">
-</head>
-
-<body dir="rtl">
-    <?php include('Header.php'); ?>
-
-    <main class="main-content">
-        <section class="basket_table">
-            <?php if (isset($_SESSION['success'])): ?>
-                <h2><?php echo $_SESSION['success'];
-                    unset($_SESSION['success']); ?></h2>
-            <?php endif; ?>
-            <?php if (isset($_SESSION['error'])): ?>
-                <p style="color: red;"><?php echo $_SESSION['error'];
-                                        unset($_SESSION['error']); ?></p>
-            <?php endif; ?>
-            <p>از خرید شما سپاسگزاریم. می‌توانید سفارشات خود را در بخش "سفارش‌های من" مشاهده کنید.</p>
-            <a href="./my-orders.php"><button>سفارش های من</button></a>
-        </section>
-    </main>
-
-    <?php include('Footer.php'); ?>
-</body>
-
-</html>

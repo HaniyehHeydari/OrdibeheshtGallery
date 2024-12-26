@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['email'] = $email;
                 $_SESSION['user_id'] = $users['id'];
                 $_SESSION['fullname'] = $users['fullname'];
-                // $_SESSION['type']=$users['type'];
                 // تعیین نوع کاربر (عمومی یا ادمین)
                 if ($users['type'] == 0) {
                     $_SESSION['user_type'] = 'public';

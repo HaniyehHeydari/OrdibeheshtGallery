@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = isset($_POST['fullname']) ? $_POST['fullname'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
-    $addres= isset($_POST['addres']) ? $_POST['addres'] : '';
+    $addres = isset($_POST['addres']) ? $_POST['addres'] : '';
     $education = isset($_POST['education']) ? $_POST['education'] : '';
     $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
 
